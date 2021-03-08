@@ -3,37 +3,52 @@ body {
   min-height: 900px;
   position: relative;
   background-size: cover;
-  font-family: 'Arimo', sans-serif; }
+  font-family: 'Arimo', sans-serif; 
+}
 
 .page {
   background: white;
   max-width: 1280px;
-  margin: 0 auto; }
+  margin: 0 auto; 
+}
 
 .navbar-brand {
   font-size: 30px;
   font-weight: 600;
-  letter-spacing: 1px; }
-  @media (max-width: 992px) {
+  letter-spacing: 1px; 
+}
+  
+@media (max-width: 500px) {
     .navbar-brand {
       display: none; } }
 
 .pp-header {
   padding-top: 3rem; }
-  .pp-header img {
+  
+  /*Logo de la empresa */
+.pp-header img {
     width: auto;
-    height: 80px;
-    margin-left: -12px; }
+    height: 70px;
+    margin-left: -12px; 
+    padding-right: 2px;
+
+}
+
+
   .pp-header h1 {
     font-weight: 400; }
   .pp-header .navbar-nav {
     letter-spacing: 1px;
     font-family: 'Arimo', sans-serif;
     font-size: 18px;
-    font-weight: 400; }
+    font-weight: 400; 
+  }
+  
   @media (max-width: 576px) {
     .pp-header {
-      padding-top: 0; } }
+      padding-top: 0; 
+    } 
+  }
 
 /* Body Section  */
 .pp-category-filter a {
@@ -307,4 +322,5 @@ body {
 
 /* Common Style */
 .pp-section {
-  padding-top: 6rem; }
+  padding-top: 3 rem; 
+}
