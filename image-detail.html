@@ -1,5 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image - Photo Perfect</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&amp;display=swap"/>
+    </noscript>
+    <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="css/main.css?ver=1.2.0" rel="stylesheet">
+  </head>
+  <body id="top">
+    <div class="page">
+
+
+
+      
+      <header>
+        <!-- DIV GENEAL! -->
+        <div class="pp-header">
+         
+         
+          <!-- Barra de navecacion https://getbootstrap.com/docs/4.0/components/navbar/ -->
+          <!-- Margenes y padin https://getbootstrap.com/docs/4.4/utilities/spacing/-->
+          <nav class="navbar navbar-expand-lg navbar-light  mb-1">  
+            
+            
+            <div class="container">
+
+
+              <!-- Logo  -->
+              <a href="index.html">
+                <img src="images/Logo.jpg" alt="Logo">
+              </a>
+              <!-- Nombre de Empresa -->
+              <a class="navbar-brand" href="index.html">Estudio Benjamín Díaz</a>
+              
+              <!-- Boton en caso de que el ancho sea muy coroto para Celulares-->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              
+              <!-- Coleccion de botones de el NavBar -->
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Proyectos</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">Estudio</a>
+                  </li>
 
 <head>
   <meta charset="UTF-8">
@@ -93,26 +145,52 @@
               <a class="mr-1 badge badge-primary" href="#">Model</a>
               <a class="badge badge-primary" href="#">Flower</a>
 
-              <div class="h5 pt-4">Year</div>
-
-              <p>2017</p>
-            </div>
-
-            <div class="col-md-9">
-              <p>Enim duis ut penatibus est netus elementum natoque cursus, imperdiet primis montes venenatis eros neque
-                augue himenaeos tellus, vulputate aptent quis non orci tortor sollicitudin. Eget phasellus dictum
-                suspendisse montes mollis dis sollicitudin augue risus volutpat, consequat diam tristique pellentesque
-                dui ut velit maecenas blandit.</p>
-              <p>Eleifend parturient potenti ut integer tempus nulla at gravida per hendrerit, ultricies nam porttitor
-                velit vehicula quam scelerisque ultrices posuere nostra, sed id fringilla vivamus phasellus quisque enim
-                montes mollis.</p>
+      <div class="page-content">
+        <div class="container">    
+          <div class="container pp-section ">
+             <!--Organizamos el contenido en dos columnas, una con descripcion y otra con las imagenes-->
+             <div class="container">
+                <div class="h3 font-weight-normal">
+                  Nombre del proyecto
+                </div>
+                <div class="row">
+                  
+                  <div class="col-md-4">
+                    <p>Enim duis ut penatibus est netus elementum natoque cursus, imperdiet primis montes venenatis eros neque augue himenaeos tellus, vulputate aptent quis non orci tortor sollicitudin. Eget phasellus dictum suspendisse montes mollis dis sollicitudin augue risus volutpat, consequat diam tristique pellentesque dui ut velit maecenas blandit.</p>
+                    <p>Eleifend parturient potenti ut integer tempus nulla at gravida per hendrerit, ultricies nam porttitor velit vehicula quam scelerisque ultrices posuere nostra, sed id fringilla vivamus phasellus quisque enim montes mollis.</p>
+                  </div>
+                    <!--Informacion innecesaria para la pagina
+                      <div class="row mt-5">
+                      <div class="col-md-3">
+                      <div class="h5">Tags</div>
+                
+                      <a class="mr-1 badge badge-primary" href="#">Nature</a>
+                      <a class="mr-1 badge badge-primary" href="#">Model</a>
+                      <a class="badge badge-primary" href="#">Flower</a>
+                      <div class="h5 pt-4">Year</div>
+                
+                      <p>2017</p>
+                    </div>
+                      -->
+                  
+                    <div class="col-md-8">
+                      <div class="imagen-proyecto" ><!--probando-->
+                        <img class="img-fluid mt-4" src="images/image-detail.jpg" />
+                      </div>
+                      <div class="imagen-proyecto"><!--probando-->
+                        <img class="img-fluid mt-4" src="images/image-detail.jpg" />
+                      </div>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
 
-        <div class="pp-section"></div>
-      </div> <!-- <?> NO SE PARA QUE SIRVE-->>
+          <div class="pp-section"></div>
+        </div> <!-- <?> NO SE PARA QUE SIRVE-->
+      </div>
     </div>
   </div>
 
