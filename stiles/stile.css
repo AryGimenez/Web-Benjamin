@@ -1,0 +1,144 @@
+/* Definición de variables de color para uso en todo el documento */
+:root {
+    --primary-color: #000000; /* Color primario: negro */
+    --secondary-color: #ffffff; /* Color secundario: blanco */
+    --accent-color: #cccccc; /* Color de acento: gris claro */
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: sans-serif; /* Fuente de letra sans-serif */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+    color: var(--primary-color); /* Color del texto: color primario (negro) */
+}
+
+/* Estilos para la cabecera (header) del sitio */
+header {
+    background-color: var(--secondary-color); /* Fondo blanco */
+    padding: 20px; /* Relleno de 20 píxeles */
+    display: flex; /* Uso de flexbox para la disposición de elementos */
+    justify-content: space-between; /* Distribución de elementos: espacio entre ellos */
+    align-items: center; /* Alineación vertical al centro */
+}
+
+/* Estilos para la imagen del logo dentro de la cabecera */
+.logo img {
+    height: 50px; /* Altura de la imagen: 50 píxeles */
+}
+
+/* Estilos para la lista de navegación */
+nav ul {
+    list-style: none; /* Sin viñetas */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+    display: flex; /* Uso de flexbox */
+}
+
+/* Estilos para cada elemento de la lista de navegación */
+nav ul li {
+    margin-left: 20px; /* Margen izquierdo de 20 píxeles */
+}
+
+/* Estilos para los enlaces dentro de la lista de navegación */
+nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: var(--primary-color); /* Color del texto: color primario (negro) */
+}
+
+/* Estilos para la sección principal (hero) */
+.hero {
+    background-image: url('hero.jpg'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el espacio disponible */
+    background-position: center; /* Centrar la imagen de fondo */
+    height: 500px; /* Altura de la sección: 500 píxeles */
+    display: flex; /* Uso de flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para el contenido dentro de la sección hero */
+.hero-content {
+    color: var(--secondary-color); /* Color del texto: color secundario (blanco) */
+}
+
+/* Estilos para el título principal dentro de la sección hero */
+.hero-content h1 {
+    font-size: 3em; /* Tamaño de la fuente: 3 veces el tamaño normal */
+    margin-bottom: 20px; /* Margen inferior de 20 píxeles */
+}
+
+/* Estilos para las secciones de "Sobre nosotros", "Proyectos", "Por qué nosotros", "Blog" y "Clientes" */
+.about, .projects, .why-us, .blog, .clients {
+    padding: 50px; /* Relleno de 50 píxeles */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para cada proyecto dentro de la sección de proyectos */
+.projects .project {
+    margin-bottom: 30px; /* Margen inferior de 30 píxeles */
+}
+
+/* Estilos para las imágenes dentro de los proyectos */
+.projects .project img {
+    max-width: 100%; /* Ancho máximo del 100% del contenedor */
+}
+
+/* Estilos para el contenedor de iconos en la sección "Por qué nosotros" */
+.why-us .icons {
+    display: flex; /* Uso de flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 30px; /* Margen superior de 30 píxeles */
+}
+
+/* Estilos para cada icono dentro de la sección "Por qué nosotros" */
+.why-us .icons img {
+    margin: 0 20px; /* Margen de 20 píxeles a los lados */
+}
+
+/* Estilos para el contenedor de publicaciones del blog */
+.blog-posts {
+    display: flex; /* Uso de flexbox */
+    justify-content: space-around; /* Distribución de elementos: espacio alrededor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+}
+
+/* Estilos para cada publicación del blog */
+.blog-post {
+    width: 30%; /* Ancho del 30% del contenedor */
+    margin-bottom: 30px; /* Margen inferior de 30 píxeles */
+}
+
+/* Estilos para las imágenes dentro de las publicaciones del blog */
+.blog-post img {
+    max-width: 100%; /* Ancho máximo del 100% del contenedor */
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    background-color: var(--accent-color); /* Fondo: color de acento (gris claro) */
+    padding: 30px; /* Relleno de 30 píxeles */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para la imagen del logo en el pie de página */
+footer .logo img {
+    height: 40px; /* Altura de la imagen: 40 píxeles */
+}
+
+/* Estilos para la información de contacto en el pie de página */
+footer .contact {
+    margin-top: 20px; /* Margen superior de 20 píxeles */
+}
+
+/* Estilos para la sección de redes sociales en el pie de página */
+footer .social {
+    margin-top: 20px; /* Margen superior de 20 píxeles */
+}
+
+/* Estilos para las imágenes de redes sociales en el pie de página */
+footer .social img {
+    height: 30px; /* Altura de la imagen: 30 píxeles */
+    margin: 0 10px; /* Margen de 10 píxeles a los lados */
+}
