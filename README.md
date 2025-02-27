@@ -72,6 +72,6 @@ Documentoar
 
 https://michalsnik.github.io/aos/
 
-
-
+<div data-aos="fade-right"></div>
+<div data-aos="fade-left"></div>
 
