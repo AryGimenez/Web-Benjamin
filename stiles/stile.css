@@ -1,7 +1,7 @@
 /* Definición de variables de color para uso en todo el documento */
 :root {
-    --primary-color: #000000; /* Color primario: negro */
-    --secondary-color: #ffffff; /* Color secundario: blanco */
+    --primary-color: #ffffff; /* Color primario: negro */
+    --secondary-color: #101420; /* Color secundario: blanco */
     --accent-color: #cccccc; /* Color de acento: gris claro */
 }
 
@@ -12,23 +12,60 @@ body {
     padding: 0; /* Sin relleno */
     color: var(--primary-color); /* Color del texto: color primario (negro) */
 }
-
+.top-bar{
+    width: 100%;
+    height: 100px; /* Ajusta la altura según sea necesario */
+    background-color: var(--secondary-color);  /* Color de la barra */
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000px; /* Asegura que la barra esté por encima de otros elementos */
+    font-size: 32px; /* Tamaño de fuente */
+    display: flex;
+    justify-content: center; /* Centrar el texto horizontalmente */
+    align-items: center; /* Centrar el texto verticalmente */
+}
 /* Estilos para la cabecera (header) del sitio */
 header {
     background-color: var(--secondary-color); /* Fondo blanco */
     padding: 20px; /* Relleno de 20 píxeles */
     display: flex; /* Uso de flexbox para la disposición de elementos */
-    justify-content: space-between; /* Distribución de elementos: espacio entre ellos */
+    flex-direction: line;
+    justify-content: flex-start; /* Distribución de elementos: espacio entre ellos */
     align-items: center; /* Alineación vertical al centro */
+    font-family: Ibarra-Real-Nova;
+    font-size: 64px;
+    margin-top: 100px;
 }
 
+header .logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+}
 /* Estilos para la imagen del logo dentro de la cabecera */
-.logo img {
-    height: 50px; /* Altura de la imagen: 50 píxeles */
+.logo2 img {
+    height: 624px; /* Altura de la imagen: 400 píxeles */
+    width: 990px;
+    margin-left: 50%;
 }
 .logo img {
-    height: 50px;
-    
+    height: 200px; /* Altura de la imagen logo: 100 píxeles */
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 40%;
+}
+
+/* Asegúrate de que el texto dentro del header esté alineado correctamente */
+header .text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-right: 35%;
 }
 /* Estilos para la lista de navegación */
 nav ul {
