@@ -8,9 +8,17 @@
     
     <!-- Enlace a la hoja de estilos principal -->
     <link rel="stylesheet" href="stiles/stile.css">
+    
+    <!-- Enlace a AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
+    <!-- Enlace a AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Encabezado principal con logo y menú de navegación -->
     <header>
         <div class="logo">
@@ -59,8 +67,10 @@
             <li>Un líder en el campo de la arquitectura, con un enfoque pragmático y orientado a resultados.</li>
         </ul>
         <div class="project">
-                <img src="image/3.jpg" alt="casa1">
-                <img src="image/4.jpg" alt="casa2">
+            
+            <div class="project-container">
+                <img src="image/3.jpg" alt="casa1" class="aos-image" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400">
+            </div>
             <h3>Una Residencia</h3>
             <p>La construcción de esta vivienda de lujo avanza a buen ritmo, mostrando ya la calidad de los materiales y la atención al detalle. El proyecto destaca por su belleza y simpleza y ofrecerá a sus futuros propietarios un estilo de vida exclusivo.</p>
         </div>
@@ -112,6 +122,23 @@
         <h2>Our Clients</h2>
         <p>Lista de clientes...</p>
     </section>
+
+        <!-- Script para alternar imágenes -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const images = [
+                    'image/3.jpg',
+                    'image/4.jpg'
+                ];
+                let currentImageIndex = 0;
+                const aosImage = document.querySelector('.aos-image');
+    
+                setInterval(() => {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    aosImage.src = images[currentImageIndex];
+                }, 4000); // Cambia la imagen cada 2 segundos
+            });
+        </script>
 
     <!-- Pie de página con información de contacto -->
     <footer>

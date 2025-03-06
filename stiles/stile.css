@@ -31,9 +31,9 @@ header {
     background-color: var(--secondary-color); /* Fondo blanco */
     padding: 20px; /* Relleno de 20 píxeles */
     display: flex; /* Uso de flexbox para la disposición de elementos */
-    flex-direction: line;
-    justify-content: flex-start; /* Distribución de elementos: espacio entre ellos */
-    align-items: center; /* Alineación vertical al centro */
+    flex-direction: row;
+    justify-content: space-between; /* Distribución de elementos: espacio entre ellos */
+    align-items: auto; /* Alineación vertical al centro */
     font-family: Ibarra-Real-Nova;
     font-size: 64px;
     margin-top: 100px;
@@ -44,21 +44,25 @@ header .logo-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: auto;
+    flex-grow: 1;
+}
+.logo2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
 }
 /* Estilos para la imagen del logo dentro de la cabecera */
 .logo2 img {
-    height: 624px; /* Altura de la imagen: 400 píxeles */
-    width: 990px;
-    margin-left: 320px
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    display: block;
 }
 .logo img {
-    height: 200px; /* Altura de la imagen logo: 100 píxeles */
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 40%;
+    max-width: 100%; /* Altura de la imagen logo: 100 píxeles */
+    height: auto; /* Ancho de la imagen logo: automático */
+    display: block;
 }
 
 /* Asegúrate de que el texto dentro del header esté alineado correctamente */
@@ -239,4 +243,11 @@ footer .social {
 footer .social img {
     height: 30px; /* Altura de la imagen: 30 píxeles */
     margin: 0 10px; /* Margen de 10 píxeles a los lados */
+}
+
+
+/* Codigo Ari agregar color para direrenciar div imagenes*/
+
+.project {
+    background-color: #ffcc00; /* Color de fondo amarillo */
 }
