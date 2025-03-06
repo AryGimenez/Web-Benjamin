@@ -1,0 +1,19 @@
+version: '3.8'
+## Esto no se si ba aca es para levantar los conenedors pero creo que no es el caso aca 
+## tendria que ir osea en el repos solo del dockerfile
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - ENV=development
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
