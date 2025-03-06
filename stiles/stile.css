@@ -1,8 +1,8 @@
 /* Definición de variables de color para uso en todo el documento */
 :root {
-    --primary-color: #ffffff; /* Color primario: negro */
+    --primary-color: #070F0F; /* Color primario: negro */
     --secondary-color: #101420; /* Color secundario: blanco */
-    --accent-color: #cccccc; /* Color de acento: gris claro */
+    --accent-color: #ffffff; /* Color de acento: gris claro */
 }
 
 /* Estilos generales para el cuerpo del documento */
@@ -16,7 +16,7 @@ body {
     width: 100%;
     height: 100px; /* Ajusta la altura según sea necesario */
     background-color: var(--secondary-color);  /* Color de la barra */
-    position: fixed; /* Fija la barra en la parte superior */
+    position: absolute; /* Fija la barra en la parte superior */
     top: 0;
     left: 0;
     z-index: 1000px; /* Asegura que la barra esté por encima de otros elementos */
@@ -24,39 +24,45 @@ body {
     display: flex;
     justify-content: center; /* Centrar el texto horizontalmente */
     align-items: center; /* Centrar el texto verticalmente */
+    color: var(--accent-color);
 }
 /* Estilos para la cabecera (header) del sitio */
 header {
     background-color: var(--secondary-color); /* Fondo blanco */
     padding: 20px; /* Relleno de 20 píxeles */
     display: flex; /* Uso de flexbox para la disposición de elementos */
-    flex-direction: line;
-    justify-content: flex-start; /* Distribución de elementos: espacio entre ellos */
-    align-items: center; /* Alineación vertical al centro */
+    flex-direction: row;
+    justify-content: space-between; /* Distribución de elementos: espacio entre ellos */
+    align-items: auto; /* Alineación vertical al centro */
     font-family: Ibarra-Real-Nova;
     font-size: 64px;
     margin-top: 100px;
+    color: var(--accent-color);
 }
 
 header .logo-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: auto;
+    flex-grow: 1;
+}
+.logo2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
 }
 /* Estilos para la imagen del logo dentro de la cabecera */
 .logo2 img {
-    height: 624px; /* Altura de la imagen: 400 píxeles */
-    width: 990px;
-    margin-left: 50%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    display: block;
 }
 .logo img {
-    height: 200px; /* Altura de la imagen logo: 100 píxeles */
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-left: 40%;
+    max-width: 100%; /* Altura de la imagen logo: 100 píxeles */
+    height: auto; /* Ancho de la imagen logo: automático */
+    display: block;
 }
 
 /* Asegúrate de que el texto dentro del header esté alineado correctamente */
@@ -66,6 +72,8 @@ header .text {
     align-items: center;
     height: 100%;
     margin-right: 35%;
+    color: var(--accent-color);
+    text-align: center;
 }
 /* Estilos para la lista de navegación */
 nav ul {
@@ -88,41 +96,95 @@ nav ul li a {
 
 /* Estilos para la sección principal (hero) */
 .hero {
-    background-image: url('hero.jpg'); /* Imagen de fondo */
     background-size: cover; /* La imagen cubre todo el espacio disponible */
     background-position: center; /* Centrar la imagen de fondo */
-    height: 500px; /* Altura de la sección: 500 píxeles */
+    height: 620px; /* Altura de la sección: 500 píxeles */
     display: flex; /* Uso de flexbox */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
-    text-align: center; /* Texto centrado */
+    text-align: center;
+    background-color: var(--primary-color);
+    margin-top: 100px;
+    margin-right: 120px;
+}
+.hero img{
+    height: 550px;
+    width: 580;
+    margin-top: 60px;
 }
 
 /* Estilos para el contenido dentro de la sección hero */
 .hero-content {
-    color: var(--secondary-color); /* Color del texto: color secundario (blanco) */
+    text-align: center;
+    color: var(--accent-color); /* Color del texto: color secundario (blanco) */
 }
 
 /* Estilos para el título principal dentro de la sección hero */
 .hero-content h1 {
-    font-size: 3em; /* Tamaño de la fuente: 3 veces el tamaño normal */
-    margin-bottom: 20px; /* Margen inferior de 20 píxeles */
+    text-align: center;
+    font-size: 46px; /* Tamaño de la fuente: 3 veces el tamaño normal */
+    margin-bottom: 120px; /* Margen inferior de 20 píxeles */
 }
-
+.hero-content p{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
 /* Estilos para las secciones de "Sobre nosotros", "Proyectos", "Por qué nosotros", "Blog" y "Clientes" */
 .about, .projects, .why-us, .blog, .clients {
     padding: 50px; /* Relleno de 50 píxeles */
     text-align: center; /* Texto centrado */
 }
+.projects h2{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-/* Estilos para cada proyecto dentro de la sección de proyectos */
-.projects .project {
-    margin-bottom: 30px; /* Margen inferior de 30 píxeles */
+.projects ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: left; /* Alinear texto a la izquierda */
+    padding-left: 20px; /* Añadir espacio a la izquierda */
+    position: relative;
+}
+
+.projects ul li::before {
+    content: '•'; /* Añadir viñeta personalizada */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.project h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.project p {
+    font-size: 16px;
+    color: var(--primary-color);
+    text-align: justify;
+    max-width: 800px;
+
+}
+
+.about text{
+    font-size: 32px;
+    font-family: sans-serif;
+    color: var(--primary-color);
+    padding: auto;;
 }
 
 /* Estilos para las imágenes dentro de los proyectos */
 .projects .project img {
     max-width: 100%; /* Ancho máximo del 100% del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Estilos para el contenedor de iconos en la sección "Por qué nosotros" */
@@ -181,4 +243,11 @@ footer .social {
 footer .social img {
     height: 30px; /* Altura de la imagen: 30 píxeles */
     margin: 0 10px; /* Margen de 10 píxeles a los lados */
+}
+
+
+/* Codigo Ari agregar color para direrenciar div imagenes*/
+
+.project {
+    background-color: #ffcc00; /* Color de fondo amarillo */
 }
