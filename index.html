@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos básicos para configuración del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitectura Benjamin</title> <!-- Título de la página -->
-    
-    <!-- Enlace a la hoja de estilos principal -->
+    <title>Arquitectura Benjamin</title>
     <link rel="stylesheet" href="stiles/stile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
-
 <body>
-    <!-- Encabezado principal con logo y menú de navegación -->
     <header>
         <div class="logo">
             <img src="image/LOGO.png" alt="Logo Benjamin">
@@ -21,35 +17,24 @@
         <div class="logo2">
             <img src="image/1.jpg" alt="Logo Benjamin">
         </div>
-        <!-- Menú de navegación principal -->
-        <!-- <nav>
-            <ul>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Trabajo Seleccionado</a></li>
-                <li><a href="#">Por qué nosotros</a></li>
-                <li><a href="#">Blogs de última hora</a></li>
-                <li><a href="#">Our Clients</a></li>
-            </ul>
-        </nav> -->
         <div class="top-bar">
             <img src="image/Insta.png" alt="Instagram">
             <h2>Arquitectura </h2>
         </div>
     </header> 
 
-    <!-- Sección Hero principal con título y eslogan -->
     <section class="hero">
         <div>
             <img src="image/2.jpg" alt="hero-image">
         </div>
         <div class="hero-content">
             <h1>Sobre Nosotros</h1>
-            <p>En B+D, creemos que la arquitectura es mucho más que diseñar edificios. Es crear espacios que inspiran, que conectan a las personas con su entorno y que reflejan sus sueños y aspiraciones.</p>
+            <p>En B+D, creemos que la arquitectura es mucho más que diseñar edificios.
+               Es crear espacios que inspiran, que conectan a las personas con su entorno y que reflejan sus sueños y aspiraciones.</p>
         </div>
     </section>
 
-     <!-- Sección de proyectos destacados -->
-     <section class="projects">
+    <section class="projects">
         <h2>Trabajo Seleccionado</h2>
         <ul>
             <li>Un arquitecto con una trayectoria sólida y una amplia experiencia en el sector.</li>
@@ -59,89 +44,77 @@
             <li>Un líder en el campo de la arquitectura, con un enfoque pragmático y orientado a resultados.</li>
         </ul>
         <div class="project">
-                <img src="image/3.jpg" alt="casa1">
-                <img src="image/4.jpg" alt="casa2">
+            <div class="image-container" data-aos="fade-right">
+                <img src="image/3.jpg" alt="casa1" class="aos-image visible">
+                <img src="image/4.jpg" alt="casa2" class="aos-image">   
+            </div>
             <h3>Una Residencia</h3>
             <p>La construcción de esta vivienda de lujo avanza a buen ritmo, mostrando ya la calidad de los materiales y la atención al detalle. El proyecto destaca por su belleza y simpleza y ofrecerá a sus futuros propietarios un estilo de vida exclusivo.</p>
         </div>
-        <!-- Más proyectos pueden agregarse aquí -->
     </section>
 
-    <!-- Sección de información sobre la empresa -->
-    <section class="about">
-        <h2>Sobre nosotros</h2>
-        <p>En B-D, creemos que la arquitectura es mucho más que diseñar edificios.
-             Es crear espacios que inspiran, que conectan a las personas con su entorno, 
-             para que reflejen sus sueños y aspiraciones.</p>
-    </section>
-
-    <!-- Sección de ventajas diferenciales -->
     <section class="why-us">
         <h2>Por qué nosotros</h2>
-        <p>Con más de 20 años de experiencia, en B-D nos dedicamos a crear espacios únicos y personalizados que superan las expectativas de nuestros clientes.</p>
-        <div class="icons">
-            <!-- Iconos representando ventajas -->
-            <img src="image/4.jpg" alt="Image 1">
-            <img src="image/3.jpg" alt="Image 2">
+        <p>Benjamín Diaz es un excelente comunicador y sabe transmitir sus ideas de forma clara y concisa.
+            Su capacidad para trabajar en equipo y coordinar a diferentes profesionales asegura una colaboración fluida y eficiente durante todo el proceso.</p>
+            <div class="Icons-Fondo">
+                <img src="image/Fondo.png" alt="Fondo-Eco">
+                <img src="image/Fondo.png" alt="Fondo-Rell">
+                <img src="image/Fondo.png" alt="Fondo-24H">
+            </div>
+            <div class="icons">
+            <img src="image/Eci.png" alt="Eco-Friendly">
+            <img src="image/Tools.png" alt="Relliable">
+            <img src="image/24H.png" alt="24Horas">
+        </div>
+        <div class="why-us-content">
+            <p>Con más de 20 años de experiencia en el sector, Benjamin es un experto en Hogares, Inmuebles y Locales.
+                Su profundo conocimiento de las últimas tendencias y tecnologías garantiza resultados innovadores y de alta calidad.</p>
         </div>
     </section>
 
-    <!-- Sección de últimas entradas del blog -->
     <section class="blog">
         <h2>Blogs de última hora</h2>
         <div class="blog-posts">
-            <!-- Entrada individual del blog -->
             <div class="blog-post">
                 <img src="image/5.jpg" alt="Blog 1">
                 <h2>Un acabado simple, limpio y bonito con colores claros</h2>
             </div>
-            <!-- Más entradas de blog pueden agregarse aquí -->
-             <div class="blog-post">
+            <div class="blog-post">
                 <img src="image/6.jpg" alt="Blog 2">
                 <h2>un excelente lugar para dejar fluir tu imaginación</h2>    
-             </div>
-             <div class="blog-post">
+            </div>
+            <div class="blog-post">
                 <img src="image/7.jpg" alt="Blog 3">
                 <h2>Un espacio amplio para poner lo que quieras</h2>
-             </div>
+            </div>
         </div>
     </section>
 
-    <!-- Sección de clientes destacados -->
     <section class="clients">
         <h2>Our Clients</h2>
         <p>Lista de clientes...</p>
     </section>
 
-    <!-- Pie de página con información de contacto -->
     <footer>
         <div class="logo">
             <img src="logo.png" alt="Logo de Arquitectura Benjamin">
         </div>
-        
-        <!-- Información de derechos de autor -->
         <p>Arquitectura Benjamin © 2023</p>
-        
-        <!-- Datos de contacto -->
         <div class="contact">
             <p>Teléfono: (+598) 98 804 249</p>
             <p>Email: cdbp.arq@gmail.com</p>
             <p>Dirección: General Flores 324, Artigas, Uruguay</p>
         </div>
-        
-        <!-- Redes sociales -->
         <div class="social">
             <a href="#"><img src="Instagram.svg" alt="Instagram"></a>
         </div>
     </footer>
 
-    <!-- Enlace al archivo JavaScript principal -->
     <script src="scripts/script.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    
 </body>
 </html>
