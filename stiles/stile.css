@@ -131,7 +131,7 @@ nav ul li a {
 /* Estilos para las secciones de "Sobre nosotros", "Proyectos", "Por qué nosotros", "Blog" y "Clientes" */
 .about, .projects, .why-us, .blog, .clients {
     padding: 50px; /* Relleno de 50 píxeles */
-    text-align: center; /* Texto centrado */
+    text-align: left; /* Texto centrado */
 }
 .projects h2{
     list-style-type: none;
@@ -154,6 +154,42 @@ nav ul li a {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+/* Estilos para el contenedor de imágenes */
+.image-container{
+    display: flex; /* Uso de flexbox */
+    justify-content: space-between; /* Espacio entre las imágenes */
+    align-items: center; /* Centrar verticalmente */
+    margin: 20px 0; /*Margen superior e inferior de 20 píxeles */
+}
+
+.casa2 {
+    position: relative;
+    left: -150px;
+    bottom: 0;
+    width: 405px;
+    height: 319px;
+    overflow: hidden;
+}
+.casa1 {
+    position: relative;
+    width: 570px;
+    height: 385px;
+    overflow: hidden;
+    margin: 20px auto; /* Centrar el contenedor y añadir margen */
+}
+
+.image-container img {
+    width: 48%;
+    height: auto;
+    opacity: 1; /* Asegúrate de que las imágenes sean visibles */
+    border-radius: 10px; /* Añadir bordes redondeados */
+}
+
+/* Estilos para los detalles del proyecto */
+.project {
+    text-align: left; /* Alinear texto a la izquierda */
 }
 
 .project h2 {
@@ -186,44 +222,6 @@ nav ul li a {
     align-items: center;
 }
 
-.project .image-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.project .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.project .image-container img.visible {
-    opacity: 1;
-
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-.image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s;
-}
 /* Estilos para el contenedor de iconos en la sección "Por qué nosotros" */
 .why-us .icons{
     display: flex; /* Uso de flexbox */
