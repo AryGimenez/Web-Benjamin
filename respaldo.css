@@ -1,0 +1,96 @@
+/* Estilos para la sección de proyectos */
+.projects {
+    padding: 40px; /* Añade un relleno de 40 píxeles alrededor del contenido del elemento */
+}
+
+/* Estilos para el encabezado h2 dentro de la sección de proyectos */
+.projects h2 {
+    font-size: 2.5em; /* Establece el tamaño de la fuente a 2.5 veces el tamaño de la fuente base */
+    margin-bottom: 20px; /* Añade un margen inferior de 20 píxeles */
+    color: #333; /* Establece el color del texto a un gris oscuro (#333) */
+}
+
+/* Estilos para la lista desordenada dentro de la sección de proyectos */
+.projects ul {
+    list-style-type: disc; /* Establece el tipo de viñeta de la lista a discos (puntos sólidos) */
+    padding-left: 20px; /* Añade un relleno de 20 píxeles a la izquierda del contenido del elemento */
+    margin-bottom: 30px; /* Añade un margen inferior de 30 píxeles */
+    color: #555; /* Establece el color del texto a un gris medio (#555) */
+}
+
+/* Estilos para el contenedor de contenido */
+.content-container {
+    display: flex; /* Establece el modelo de caja flexible (flexbox) para el contenedor */
+    justify-content: space-between; /* Distribuye el espacio sobrante entre los elementos hijos, dejando espacio igual entre ellos */
+}
+
+/* Estilos para la sección derecha */
+.right-section {
+    width: 40%; /* Establece el ancho del elemento al 40% del contenedor padre */
+    padding-right: 20px; /* Añade un relleno de 20 píxeles a la derecha del contenido del elemento */
+}
+
+/* Estilos para el contenido */
+.content {
+    max-width: 500px; /* Establece el ancho máximo del elemento a 500 píxeles */
+}
+
+
+
+/* Estilos para el encabezado h2 dentro de la sección derecha */
+.right-section h2 {
+    font-size: 2em; /* Establece el tamaño de la fuente a 2 veces el tamaño de la fuente base */
+    margin-bottom: 20px; /* Añade un margen inferior de 20 píxeles */
+    color: #333; /* Establece el color del texto a un gris oscuro (#333) */
+}
+
+/* Estilos para los párrafos dentro de la sección derecha */
+.right-section p {
+    line-height: 1.6; /* Establece la altura de línea a 1.6 veces el tamaño de la fuente */
+    margin-bottom: 30px; /* Añade un margen inferior de 30 píxeles */
+    color: #555; /* Establece el color del texto a un gris medio (#555) */
+}
+
+
+
+
+/* Estilos para los elementos con clases casa1 y casa2 */
+.casa1, .casa2 {
+    position: absolute; /* Establece el posicionamiento absoluto para los elementos */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del área del elemento */
+    border-radius: 5px; /* Añade bordes redondeados con un radio de 5 píxeles */
+}
+
+/* Estilos específicos para el elemento con clase casa1 */
+.casa1 {
+    width: 70px; /* Establece el ancho del elemento a 70 píxeles */
+    height: 40px; /* Establece la altura del elemento a 40 píxeles */
+    bottom: 0; /* Posiciona el borde inferior del elemento en 0 píxeles desde el borde inferior del contenedor relativo */
+}
+
+/* Estilos específicos para el elemento con clase casa2 */
+.casa2 {
+    width: 50px;  /* Ancho fijo */
+    height: 10px;  /* Altura fija */
+    top: 20px; /* Mueve el elemento 20 píxeles hacia abajo desde la parte superior del contenedor relativo */
+    left: 20px; /* Mueve el elemento 20 píxeles hacia la derecha desde la parte izquierda del contenedor relativo */
+}
+
+
+/* .image-container {
+    width: 50%;
+    position: relative;
+} */
+
+
+/* .casas {
+    max-width: 570px;
+    max-height: 385px;
+    background-color: aquamarine;
+} */
+
+/* .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+} */
