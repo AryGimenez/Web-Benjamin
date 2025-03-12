@@ -133,83 +133,87 @@ nav ul li a {
     padding: 50px; /* Relleno de 50 píxeles */
     text-align: left; /* Texto centrado */
 }
-.projects h2{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.projects ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-    text-align: left; /* Alinear texto a la izquierda */
-    padding-left: 20px; /* Añadir espacio a la izquierda */
+.projects ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container {
+    width: 60%; /* Aumentado a 60% */
     position: relative;
 }
 
-.projects ul li::before {
-    content: '•'; /* Añadir viñeta personalizada */
-    color: var(--primary-color);
+.casas {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+}
+
+.casas img.casa1 {
+    width: 80%;
     position: absolute;
-    left: 0;
-    top: 0;
+    bottom: 10;
+    left: 130px;
 }
 
-/* Estilos para el contenedor de imágenes */
-.image-container{
-    display: flex; /* Uso de flexbox */
-    justify-content: space-between; /* Espacio entre las imágenes */
-    align-items: center; /* Centrar verticalmente */
-    margin: 20px 0; /*Margen superior e inferior de 20 píxeles */
-}
-
-.casa2 {
-    position: relative;
-    left: -150px;
-    bottom: 0;
-    width: 405px;
-    height: 319px;
-    overflow: hidden;
-}
-.casa1 {
-    position: relative;
-    width: 570px;
-    height: 385px;
-    overflow: hidden;
-    margin: 20px auto; /* Centrar el contenedor y añadir margen */
+.casas img.casa2 {
+    width: 60%;
+    position: absolute;
+    bottom: 20px;
+    left: -5px;
 }
 
 .image-container img {
-    width: 100%;
     height: auto;
-    opacity: 1; /* Asegúrate de que las imágenes sean visibles */
-    border-radius: 10px; /* Añadir bordes redondeados */
+    display: block;
+    border-radius: 5px;
 }
 
-/* Estilos para los detalles del proyecto */
-.project {
-    text-align: left; /* Alinear texto a la izquierda */
+.right-section {
+    width: 35%; /* Reducido a 35% */
+    padding-left: 20px;
+    text-align: left;
 }
 
-.project h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+.content {
+    max-width: 500px;
 }
 
-
-.project p {
-    font-size: 16px;
-    color: var(--primary-color);
-    text-align: justify;
-    max-width: 800px;
-
+.right-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
 }
 
+.right-section p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.view-case {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+}
 
 .about text{
     font-size: 32px;
@@ -227,76 +231,121 @@ nav ul li a {
     align-items: center;
 }
 
-/* Estilos para el contenedor de iconos en la sección "Por qué nosotros" */
-.why-us .icons{
-    display: flex; /* Uso de flexbox */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    margin-top: 30px; /* Margen superior de 30 píxeles */
-    gap: 20px; /* Espacio entre los íconos */
-    z-index: 2; /* Asegura que los íconos estén por encima de las imágenes */
-}
-
-/* Estilos para cada icono dentro de la sección "Por qué nosotros" */
-.why-us .icons img {
-    width: 150px; /* Ajusta el tamaño de los íconos según sea necesario */
-    height: 150px; /* Ajusta el tamaño de los íconos según sea necesario */
-    margin: 0 10px; /* Margen de 10 píxeles a los lados */
-}
-
-.why-us .icons .Icons-Fondo {
-    display: flex; /* Uso de flexbox */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    gap: 20px; /* Espacio entre los íconos */
-}
-
-.why-us h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 40px;
-}
-.why-us p{
+.why-us {
+    background-color: #101420;
+    color:white;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: flex-start;
-    font-size: 24px;
-    margin-top: 20px;
-}
-.why-us {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-    display: flex; /* Uso de flexbox */
-    flex-direction: column; /* Disposición en columna */
-    justify-content: flex-start; /* Alinear contenido al inicio */
-    align-items: flex-start; /* Alinear contenido al centro */
-    text-align: left;
-    margin-left: 325px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
     position: relative;
     width: 100%;
-    height: auto; /* Ajustado para que la altura se ajuste al contenido */
-    padding: 20px;
+    height: 400px;
+    margin-left: 120px;
+}
+
+.why-us h2 {
+    font-size: 2.5em;
+    position: relative;
+    bottom: 100px;
+}
+
+.why-us-text {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 1100px;
+    height: 367px;
+    text-align: left;
+    position: absolute;
+    top: 200px;
+    bottom: auto;
+    left: auto;
+    right: 150px;
 }
 
 .why-us-content {
-    background-color: #d6d6d6;
-    color: var(--primary-color);
+    background-color: #bebebe;
+    padding: 30px;
+    max-width: 400px;
+    text-align: left;
+    border-radius: 10px;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    transform: translateX(-35%);
+}
+
+.why-us-content p {
+    line-height: 1.6;
+    color: #000000;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 200px;
+    top: 375px;
+    left: 1100px;
+    width: 300px;
+    z-index: 1;
+}
+
+.icon {
+    position: relative;
+    margin: 0 20px;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.icon img.icon-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.icon p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Nuevos estilos */
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 300px;
+}
+
+.icon {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    position: relative;
-    left: -175px; /* Mueve el contenido 175 píxeles a la izquierda */
-    bottom: 0;
-    max-width: 370px;
-    height: auto;
-    margin-top: 20px;
-    padding: 20px;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.icon img.icon-background {
+    width: 170px;
+    height: 170px;
 }
 /* Estilos para el contenedor de publicaciones del blog */
 .blog-posts {
