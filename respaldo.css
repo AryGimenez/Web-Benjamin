@@ -1,13 +1,221 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+/* Definición de variables de color para uso en todo el documento */
+:root {
+    --primary-color: #070F0F;
+    --secondary-color: #101420;
+    --accent-color: #ffffff;
+    --font1: sans-serif;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+}
+
+.top-bar {
+    width: 100%;
+    height: 100px;
+    background-color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Ibarra-Real-Nova;
+    font-size: 4em;
+    margin-top: 100px;
+    color: var(--accent-color);
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo2 img {
+    max-width: 60%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.logo img {
+    max-width: 15%;
+    height: auto;
+}
+
+header .text {
+    color: var(--accent-color);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    margin-top: 100px;
+    margin-right: 5%;
+}
+
+.hero img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 5%;
+}
+
+.hero-content p {
+    font-size: 2em;
+    margin-bottom: 2%;
+}
+
+.about, .projects, .why-us, .blog, .clients {
+    padding: 50px;
+    text-align: left;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.projects ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    width: 60%;
+    position: relative;
+}
+
+.casas {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+}
+
+.casas img.casa1 {
+    max-width: 80%;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+}
+
+.casas img.casa2 {
+    max-width: 60%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.right-section {
+    width: 35%;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.right-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.right-section p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.view-case {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.about text {
+    font-size: 2em;
+    font-family: var(--font1);
+    color: var(--primary-color);
+}
+
+.project img {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .why-us {
-    background-color: #101420;
-    color:white;
-    height: auto;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,27 +223,24 @@ body {
     padding: 20px;
     position: relative;
     width: 100%;
-    height: 400px;
-    margin-left: 120px;
+    height: auto;
+    margin-left: 5%;
 }
 
 .why-us h2 {
     font-size: 2.5em;
     position: relative;
-    bottom: 100px;
+    bottom: 5%;
 }
 
 .why-us-text {
     line-height: 1.6;
     margin-bottom: 30px;
-    max-width: 1100px;
-    height: 367px;
+    max-width: 80%;
     text-align: left;
     position: absolute;
-    top: 200px;
-    bottom: auto;
-    left: auto;
-    right: 150px;
+    top: 20%;
+    right: 5%;
 }
 
 .why-us-content {
@@ -45,8 +250,8 @@ body {
     text-align: left;
     border-radius: 10px;
     position: absolute;
-    top: 250px;
-    left: 50px;
+    top: 30%;
+    left: 5%;
     transform: translateX(-35%);
 }
 
@@ -57,51 +262,12 @@ body {
 
 .icons-container {
     display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: 200px;
-    top: 375px;
-    left: 1000px;
-    width: 300px;
-    z-index: 1;
-}
-
-.icon {
-    position: relative;
-    margin: 0 20px;
-    padding: 50px;
-    padding-bottom: 20px;
-}
-
-.icon img {
-    display: block;
-    margin: 0 auto;
-}
-
-.icon img.icon-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.icon p {
-    margin-top: 10px;
-    color: #333;
-    font-size: 16px;
-}
-
-/* Nuevos estilos */
-
-.icons-container {
-    display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 10%;
+    right: 5%;
     width: 300px;
+    z-index: 1;
 }
 
 .icon {
@@ -119,4 +285,66 @@ body {
 .icon img.icon-background {
     width: 170px;
     height: 170px;
+}
+
+.icon p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.blog {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.blog h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: #101420; /* Fondo: color de la imagen de referencia */
+    padding: 20px; /* Relleno */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: space-around; /* Espacio entre los elementos */
+    align-items: center; /* Centramos verticalmente */
+    color: white; /* Color del texto */
+    margin-top: 300px;
+}
+
+footer .logo img {
+    height: 135px; /* Altura del logo */
+    border-radius: 50%; /* Hace el logo circular */
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los elementos */
+    position: relative;
+    left: -90px;
+}
+
+footer .contact-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centramos verticalmente los iconos */
+    gap: 100px; /* Espacio entre el icono y el texto */
+}
+
+footer .contact img {
+    height: 25px; /* Altura de los iconos */
 }
