@@ -3,15 +3,17 @@
     --primary-color: #070F0F; /* Color primario: negro */
     --secondary-color: #101420; /* Color secundario: blanco */
     --accent-color: #ffffff; /* Color de acento: gris claro */
+    --font1: sans-sherif;
 }
 
 /* Estilos generales para el cuerpo del documento */
 body {
-    font-family: sans-serif; /* Fuente de letra sans-serif */
+    font-family: Arial, sans-serif; /* Fuente de letra sans-serif */
     margin: 0; /* Sin márgenes */
     padding: 0; /* Sin relleno */
     color: var(--primary-color); /* Color del texto: color primario (negro) */
 }
+
 .top-bar{
     width: 100%;
     height: 100px; /* Ajusta la altura según sea necesario */
@@ -133,116 +135,313 @@ nav ul li a {
 /* Estilos para las secciones de "Sobre nosotros", "Proyectos", "Por qué nosotros", "Blog" y "Clientes" */
 .about, .projects, .why-us, .blog, .clients {
     padding: 50px; /* Relleno de 50 píxeles */
-    text-align: center; /* Texto centrado */
-}
-.projects h2{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    text-align: left; /* Texto centrado */
 }
 
-.projects ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-    text-align: left; /* Alinear texto a la izquierda */
-    padding-left: 20px; /* Añadir espacio a la izquierda */
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.projects ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container {
+    width: 60%; /* Aumentado a 60% */
     position: relative;
 }
 
-.projects ul li::before {
-    content: '•'; /* Añadir viñeta personalizada */
-    color: var(--primary-color);
+.casas {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+}
+
+.casas img.casa1 {
+    width: 80%;
     position: absolute;
-    left: 0;
-    top: 0;
+    bottom: 10;
+    left: 130px;
 }
 
-.project h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+.casas img.casa2 {
+    width: 60%;
+    position: absolute;
+    bottom: 20px;
+    left: -5px;
 }
 
-.project p {
-    font-size: 16px;
-    color: var(--primary-color);
-    text-align: justify;
-    max-width: 800px;
+.image-container img {
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
 
+.right-section {
+    width: 35%; /* Reducido a 35% */
+    padding-left: 20px;
+    text-align: left;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.right-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.right-section p {
+    font-size: 24gpx;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.view-case {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
 }
 
 .about text{
     font-size: 32px;
-    font-family: sans-serif;
+    font-family: var(--font1);
     color: var(--primary-color);
     padding: auto;;
 }
 
 /* Estilos para las imágenes dentro de los proyectos */
-.projects .project img {
+
+.project img{
     max-width: 100%; /* Ancho máximo del 100% del contenedor */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Estilos para el contenedor de iconos en la sección "Por qué nosotros" */
-.why-us .icons {
-    display: flex; /* Uso de flexbox */
-    justify-content: center; /* Centrar horizontalmente */
-    margin-top: 30px; /* Margen superior de 30 píxeles */
+.why-us {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-left: 120px;
 }
 
-/* Estilos para cada icono dentro de la sección "Por qué nosotros" */
-.why-us .icons img {
-    margin: 0 20px; /* Margen de 20 píxeles a los lados */
+.why-us h2 {
+    font-size: 2.5em;
+    position: relative;
+    bottom: 100px;
 }
 
+.why-us-text {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 1100px;
+    height: 367px;
+    text-align: left;
+    position: absolute;
+    top: 200px;
+    bottom: auto;
+    left: auto;
+    right: 150px;
+}
+
+.why-us-content {
+    background-color: #bebebe;
+    padding: 30px;
+    max-width: 400px;
+    text-align: left;
+    border-radius: 10px;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    transform: translateX(-35%);
+}
+
+.why-us-content p {
+    line-height: 1.6;
+    color: #000000;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 200px;
+    top: 375px;
+    left: 1100px;
+    width: 300px;
+    z-index: 1;
+}
+
+.icon {
+    position: relative;
+    margin: 0 20px;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+
+.icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.icon img.icon-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.icon p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Nuevos estilos */
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.icon img.icon-background {
+    width: 170px;
+    height: 170px;
+}
 /* Estilos para el contenedor de publicaciones del blog */
+.blog {
+    background-color: var(--secondary-color); /* Color de fondo */
+    padding: 40px;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.blog h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
 .blog-posts {
-    display: flex; /* Uso de flexbox */
-    justify-content: space-around; /* Distribución de elementos: espacio alrededor */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(190px);
+    gap: 100px; /* Espacio entre las imágenes */
+    
 }
 
-/* Estilos para cada publicación del blog */
 .blog-post {
-    width: 30%; /* Ancho del 30% del contenedor */
-    margin-bottom: 30px; /* Margen inferior de 30 píxeles */
+    width: 370px; /* Ancho de las imágenes */
+    height: 480px;
+    text-align: center;
 }
 
-/* Estilos para las imágenes dentro de las publicaciones del blog */
 .blog-post img {
-    max-width: 100%; /* Ancho máximo del 100% del contenedor */
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    position:relative;
+    left: 10px;
+    bottom: 25px;
+    transform: translateY(-40px);
+    width: 350px;
+    height: 97px;
+    font-size: 1.1em;
+    color: var(--accent-color);
+    z-index: 1;
 }
 
 /* Estilos para el pie de página (footer) */
+
 footer {
-    background-color: var(--accent-color); /* Fondo: color de acento (gris claro) */
-    padding: 30px; /* Relleno de 30 píxeles */
-    text-align: center; /* Texto centrado */
+    background-color: var(--secondary-color); /* Fondo: color de la imagen de referencia */
+    padding: 20px; /* Relleno */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: space-around; /* Espacio entre los elementos */
+    align-items: center; /* Centramos verticalmente */
+    color: var(--accent-color); /* Color del texto */
+    margin-top: 300px;
 }
 
-/* Estilos para la imagen del logo en el pie de página */
 footer .logo img {
-    height: 40px; /* Altura de la imagen: 40 píxeles */
+    width: 135px;
+    height: 135px; /* Altura del logo */
+    border-radius: 50%; /* Hace el logo circular */
+    position: relative;
+    left: -100px;
 }
 
-/* Estilos para la información de contacto en el pie de página */
 footer .contact {
-    margin-top: 20px; /* Margen superior de 20 píxeles */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los elementos */
+    position: relative;
+    left: -90px;
 }
 
-/* Estilos para la sección de redes sociales en el pie de página */
-footer .social {
-    margin-top: 20px; /* Margen superior de 20 píxeles */
+footer .contact-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centramos verticalmente los iconos */
+    gap: 100px; /* Espacio entre el icono y el texto */
 }
 
-/* Estilos para las imágenes de redes sociales en el pie de página */
-footer .social img {
-    height: 30px; /* Altura de la imagen: 30 píxeles */
-    margin: 0 10px; /* Margen de 10 píxeles a los lados */
+footer .contact img {
+    height: 25px; /* Altura de los iconos */
 }
 
 
