@@ -15,7 +15,7 @@ body {
 }
 
 .top-bar{
-    width: 100%;
+    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
     height: 100px; /* Ajusta la altura según sea necesario */
     background-color: var(--secondary-color);  /* Color de la barra */
     position: absolute; /* Fija la barra en la parte superior */
@@ -42,18 +42,37 @@ header {
     color: var(--accent-color);
 }
 
-header .logo-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-grow: 1;
+/* Es para que el titulo Arquitectura Benjamin este mas junto*/
+.tight-spacing {    
+    line-height: 0.2; /* Ajusta este valor según sea necesario */
+    /* margin-bottom: 5px;  Ajusta este valor según sea necesario */
 }
+
+
+/* En esto estoy trabajando haora */
+header .logo img {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente (opcional, si quieres también centrarlo verticalmente) */
+}
+
+/*
+.logo img {
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+}
+*/
+
+
 .logo2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
 }
+
+
 /* Estilos para la imagen del logo dentro de la cabecera */
 .logo2 img {
     max-width: 100%;
@@ -61,11 +80,7 @@ header .logo-container {
     margin-left: 0;
     display: block;
 }
-.logo img {
-    max-width: 100%; /* Altura de la imagen logo: 100 píxeles */
-    height: auto; /* Ancho de la imagen logo: automático */
-    display: block;
-}
+
 
 /* Asegúrate de que el texto dentro del header esté alineado correctamente */
 header .text {
@@ -450,3 +465,4 @@ footer .contact img {
 .project {
     background-color: #ffcc00; /* Color de fondo amarillo */
 }
+
