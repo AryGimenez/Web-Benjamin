@@ -28,18 +28,26 @@ body {
     align-items: center; /* Centrar el texto verticalmente */
     color: var(--accent-color);
 }
-/* Estilos para la cabecera (header) del sitio */
+/* Estilos para la cabecera (header) del sitio  La parte superior de la pagina donde esta la imagen y el logo*/
 header {
     background-color: var(--secondary-color); /* Fondo blanco */
-    padding: 20px; /* Relleno de 20 píxeles */
-    display: flex; /* Uso de flexbox para la disposición de elementos */
-    flex-direction: row;
-    justify-content: space-between; /* Distribución de elementos: espacio entre ellos */
-    align-items: auto; /* Alineación vertical al centro */
-    font-family: Ibarra-Real-Nova;
-    font-size: 64px;
-    margin-top: 100px;
-    color: var(--accent-color);
+    
+    
+    /* padding: 20px;  Borde interior de 20px */
+
+    padding-top: 20px; /* ↑ Borde superior interior  */
+    padding-right: 0px; /* → Borde derecho interior */ 
+    padding-bottom: 0px; /* ↓ Borde inferior interior */
+    padding-left: 20px; /* ← Borde izquierdo interior de */
+
+    display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
+    flex-direction: row; /* Define la dirección del eje principal como horizontal (de izquierda a derecha). */
+    justify-content: space-between; /* Distribuye los elementos hijos del contenedor flex con el máximo espacio posible entre ellos. */
+    align-items: auto; /* Alinea los elementos hijos del contenedor flex según su valor de alineación automática en el eje transversal (verticalmente). */
+    font-family: Ibarra-Real-Nova; /* Establece la fuente de los textos dentro del contenedor. */
+    font-size: 64px; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
+    margin-top: 100px; /* Añade un margen superior de 100 píxeles al contenedor. */
+    color: var(--accent-color); /* Establece el color del texto utilizando la variable CSS --accent-color. */
 }
 
 /* Es para que el titulo Arquitectura Benjamin este mas junto*/
@@ -47,7 +55,7 @@ header {
     line-height: 0.2; /* Ajusta este valor según sea necesario */
     /* margin-bottom: 5px;  Ajusta este valor según sea necesario */
 }
-
+/*
 
 /* En esto estoy trabajando haora */
 header .logo img {
@@ -56,25 +64,27 @@ header .logo img {
     align-items: center; /* Centra el contenido verticalmente (opcional, si quieres también centrarlo verticalmente) */
 }
 
-/*
+
 .logo img {
     max-width: 100%; 
     height: auto; 
     display: block;
 }
-*/
 
 
-.logo2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
+
+/* Div contenedora de la Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
+.heder-img {
+    /*Documentacion properti flex: https://developer.mozilla.org/es/docs/Web/CSS/flex */
+    display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
+    justify-content: flex-end; /* Alinea los elementos hijos del contenedor flex al final del eje principal (horizontalmente, en la mayoría de los casos). */
+    align-items: center; /* Alinea los elementos hijos del contenedor flex en el centro del eje transversal (verticalmente, en la mayoría de los casos). */
+    flex-grow: 1; /* Permite que el contenedor crezca para llenar el espacio disponible en el contenedor padre. */
 }
 
 
-/* Estilos para la imagen del logo dentro de la cabecera */
-.logo2 img {
+/* Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
+.heder-img img {
     max-width: 100%;
     height: auto;
     margin-left: 0;

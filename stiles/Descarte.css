@@ -1,0 +1,13 @@
+*//* En esto estoy trabajando haora */
+header .logo img {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente (opcional, si quieres también centrarlo verticalmente) */
+}
+
+
+.logo img {
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+}
