@@ -3,7 +3,9 @@
     --primary-color: #070F0F; /* Color primario: negro */
     --secondary-color: #101420; /* Color secundario: blanco */
     --accent-color: #ffffff; /* Color de acento: gris claro */
-    --font1: sans-sherif;
+    --font1: sans-sherif;  
+    --font2: Arial;/* Ibarra-Real-Nova; */
+
 }
 
 /* Estilos generales para el cuerpo del documento */
@@ -15,6 +17,8 @@ body {
 }
 
 .top-bar{
+    display: flex; /* Establece el contenedor como un contenedor flex, permitiendo el uso de Flexbox para alinear y distribuir el contenido */
+    
     width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
     height: 100px; /* Ajusta la altura según sea necesario */
     background-color: var(--secondary-color);  /* Color de la barra */
@@ -22,8 +26,8 @@ body {
     top: 0;
     left: 0;
     z-index: 1000px; /* Asegura que la barra esté por encima de otros elementos */
-    font-size: 32px; /* Tamaño de fuente */
-    display: flex;
+    font-size: clamp(1rem, 3vw, 20px); /* Tamaño de fuente mínimo de 1rem, preferido de 3vw, y máximo de 20px */
+    
     justify-content: center; /* Centrar el texto horizontalmente */
     align-items: center; /* Centrar el texto verticalmente */
     color: var(--accent-color);
@@ -35,17 +39,21 @@ header {
     
     /* padding: 20px;  Borde interior de 20px */
 
-    padding-top: 20px; /* ↑ Borde superior interior  */
+    padding-top: 2vw; /* ↑ Borde superior interior  */
     padding-right: 0px; /* → Borde derecho interior */ 
     padding-bottom: 0px; /* ↓ Borde inferior interior */
-    padding-left: 20px; /* ← Borde izquierdo interior de */
+    padding-left: 2vw; /* ← Borde izquierdo interior de */
+
+    /* !!? Talves aca usar un display:grid https://www.youtube.com/shorts/9LdiQ8iX6WQ */
+
 
     display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
     flex-direction: row; /* Define la dirección del eje principal como horizontal (de izquierda a derecha). */
     justify-content: space-between; /* Distribuye los elementos hijos del contenedor flex con el máximo espacio posible entre ellos. */
     align-items: auto; /* Alinea los elementos hijos del contenedor flex según su valor de alineación automática en el eje transversal (verticalmente). */
-    font-family: Ibarra-Real-Nova; /* Establece la fuente de los textos dentro del contenedor. */
-    font-size: 64px; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
+    
+    font-family: var(--font2); /* Establece la fuente de los textos dentro del contenedor. Usa la variable para la fuente */
+    font-size: 3vw; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
     margin-top: 100px; /* Añade un margen superior de 100 píxeles al contenedor. */
     color: var(--accent-color); /* Establece el color del texto utilizando la variable CSS --accent-color. */
 }
