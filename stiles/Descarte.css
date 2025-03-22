@@ -7,7 +7,38 @@ header .logo img {
 
 
 .logo img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor padre, evitando que la imagen se desborde del contenedor. */
+    height: auto; /* Ajusta la altura de la imagen automáticamente para mantener la proporción original de la imagen. */
+    display: block; /* Cambia el comportamiento de la imagen a un elemento de bloque, eliminando el espacio en blanco debajo de la imagen. */
+}
+
+
+/* Es para que el titulo Arquitectura Benjamin este mas junto*/
+.tight-spacing {    
+    line-height: 0.2; /* Ajusta este valor según sea necesario */
+    /* margin-bottom: 5px;  Ajusta este valor según sea necesario */
+}
+
+
+
+/* En esto estoy trabajando haora */
+header .logo img {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente (opcional, si quieres también centrarlo verticalmente) */
+}
+
+/* En esto estoy trabajando haora */
+header .logo img {
+    position: absolute; /* Posiciona el logo absolutamente dentro del contenedor relativo */
+    left: 50%; /* Mueve el logo al 50% del ancho del contenedor */
+    transform: translateX(-50%); /* Centra el logo horizontalmente */
     display: block;
+}
+
+header .logo {
+    position: relative; /* Establece el contenedor como relativo para que los elementos hijos puedan posicionarse absolutamente dentro de él */
+    display: flex;
+    justify-content: flex-end; /* Alinea el texto a la derecha */
+    align-items: center; /* Centra verticalmente */
 }
