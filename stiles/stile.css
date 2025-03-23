@@ -13,45 +13,18 @@ body {
     font-family: Arial, sans-serif; /* Fuente de letra sans-serif */
     margin: 0; /* Sin márgenes */
     padding: 0; /* Sin relleno */
-    color: var(--primary-color); /* Color del texto: color primario (negro) */
-}
-/* Bara superior titolo de la pagina*/ 
-/* ?!! Esot tendria que ser un natvar o algo mejor actuamente es un dir */
-.top-bar{
-    display: flex; /* Establece el contenedor como un contenedor flex, permitiendo el uso de Flexbox para alinear y distribuir el contenido */
-    
-    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
-    height: 100px; /* Ajusta la altura según sea necesario */
-    background-color: var(--secondary-color);  /* Color de la barra */
-
-    /* */
-    position: absolute; /* Fija la barra en la parte superior */
-    top: 0;
-    left: 0;
-    z-index: 1000px; /* Asegura que la barra esté por encima de otros elementos */
-    font-size: clamp(1rem, 3vw, 20px); /* Tamaño de fuente mínimo de 1rem, preferido de 3vw, y máximo de 20px */
-    
-    justify-content: center; /* Centrar el texto horizontalmente */
-    align-items: center; /* Centrar el texto verticalmente */
-    color: var(--accent-color);
+    color: var(--secondary-color); /* Color del texto: color primario (negro) */
 }
 
 
 /* Estilos para la cabecera (header) del sitio  La parte superior de la pagina donde esta la imagen y el logo*/
 header {
     background-color: var(--secondary-color); /* Fondo blanco */
-    
-    
-    /* padding: 20px;  Borde interior de 20px */
-
     padding-top: 2vw; /* ↑ Borde superior interior  */
     padding-right: 0px; /* → Borde derecho interior */ 
     padding-bottom: 0px; /* ↓ Borde inferior interior */
     padding-left: 2vw; /* ← Borde izquierdo interior de */
-
     /* !!? Talves aca usar un display:grid https://www.youtube.com/shorts/9LdiQ8iX6WQ */
-
-
     display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
     flex-direction: row; /* Define la dirección del eje principal como horizontal (de izquierda a derecha). */
     justify-content: space-between; /* Distribuye los elementos hijos del contenedor flex con el máximo espacio posible entre ellos. */
@@ -64,20 +37,12 @@ header {
 }
 
 
-
-
+/* div de divicion par titulo del header y logo */
 header .logo {
     position: relative; /* Establece el contenedor como relativo para que los elementos hijos puedan posicionarse absolutamente dentro de él */
     display: block; /* Cambia el comportamiento de la imagen a un elemento de bloque, eliminando el espacio en blanco debajo de la imagen. */
-   
-   
-    /* display: flex; */
-    /*flex-direction: column; /* Cambia la dirección del eje principal a vertical */
-    /* justify-content: center; /*  Centra el contenido horizontalmente */
-    /* align-items: center; /* Centra el contenido verticalmente */
-    /* width: 100%; */
     max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor padre, evitando que la imagen se desborde del contenedor. */
-    height: auto; /* Ajusta la altura de la imagen automáticamente para mantener la proporción original de la imagen. */
+    height: auto; /* Ajusta la altura de ala imagen automáticamente para mantener la proporción original de la imagen. */
     
     /* ?!! esto esta interesante por lo que entendi me permiete aliniear elmentos uno ensima del otro y sentrar el log */
     /* https://www.youtube.com/watch?v=1Nv4HnZq6Lg&t=310s*/
@@ -93,8 +58,42 @@ header .logo img {
     margin-top: 10px; /* Añade un margen superior para separar el logo del texto */
 }
 
+/* Codigo a probar ------------------------*/
 
 
+/* Navigation styling */
+nav {
+    background-color: var(--primary-color); /* Using your primary color variable */
+    padding: 15px 0;
+    position: fixed; /* Makes the nav stay at top when scrolling */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensures nav appears above other content */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the menu items */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--accent-color); /* This is your white color variable */
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+/* ----------------------------------------*/
 
 /* Div contenedora de la Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
 .heder-img {

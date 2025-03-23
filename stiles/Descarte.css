@@ -42,3 +42,37 @@ header .logo {
     justify-content: flex-end; /* Alinea el texto a la derecha */
     align-items: center; /* Centra verticalmente */
 }
+
+
+
+
+
+
+
+
+
+/* Bara superior titolo de la pagina*/ 
+/* ?!! Esot tendria que ser un natvar o algo mejor actuamente es un dir */
+.top-bar{
+    display: flex; /* Establece el contenedor como un contenedor flex, permitiendo el uso de Flexbox para alinear y distribuir el contenido */
+    
+    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
+    height: 100px; /* Ajusta la altura según sea necesario */
+    background-color: var(--secondary-color);  /* Color de la barra */
+
+    /* */
+    position: absolute; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000px; /* Asegura que la barra esté por encima de otros elementos */
+    font-size: clamp(1rem, 3vw, 20px); /* Tamaño de fuente mínimo de 1rem, preferido de 3vw, y máximo de 20px */
+    
+    justify-content: center; /* Centrar el texto horizontalmente */
+    align-items: center; /* Centrar el texto verticalmente */
+    color: var(--accent-color);
+}
+
+
+
+
+/* --- Codigo para intentar poner el color texto de nav en blanco */
