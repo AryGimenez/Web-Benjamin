@@ -63,12 +63,12 @@ header .logo img {
 
 /* Navigation styling */
 nav {
-    background-color: var(--primary-color); /* Using your primary color variable */
+    background-color: var(--secondary-color); /* Using your primary color variable */
     padding: 15px 0;
     position: fixed; /* Makes the nav stay at top when scrolling */
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensures nav appears above other content */
+    z-index: 1; /* Ensures nav appears above other content */
 }
 
 nav ul {
@@ -77,6 +77,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center; /* Centers the menu items */
+
 }
 
 nav ul li {
@@ -96,7 +97,7 @@ nav ul li a:hover {
 /* ----------------------------------------*/
 
 /* Div contenedora de la Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
-.heder-img {
+.header-img {
     /*Documentacion properti flex: https://developer.mozilla.org/es/docs/Web/CSS/flex */
     display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
     justify-content: flex-end; /* Alinea los elementos hijos del contenedor flex al final del eje principal (horizontalmente, en la mayoría de los casos). */
@@ -106,7 +107,7 @@ nav ul li a:hover {
 
 
 /* Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
-.heder-img img {
+.header-img img {
     max-width: 100%;
     height: auto;
     margin-left: 0;
@@ -124,6 +125,7 @@ header .text {
     color: var(--accent-color);
     text-align: center;
 }
+
 /* Estilos para la lista de navegación */
 nav ul {
     list-style: none; /* Sin viñetas */
