@@ -19,58 +19,49 @@
 
 <body>
     <!-- Encabezado principal con logo y menú de navegación -->
-
-    <nav>
+    <nav class="top-bar">
+        
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre Nosobros</a></li>
-            <li><a href="#">Trabajo Seleccionado</a></li>
-            <li><a href="#">Por qué nosotros</a></li>
-            <li><a href="#">Ultimos Proyectos</a></li>
-            <li><a href="#">Blogs de última hora</a></li>
-            <li><a href="#">Our Clients</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="#trabajo-seleccionado">Trabajo Seleccionado</a></li>
+          <li><a href="#por-que-nosotros">Por qué nosotros</a></li>
+          <li><a href="#ultimos-proyectos">Ultimos Proyectos</a></li>
+          <li><a href="#contacto">Contactos</a></li>
         </ul>
-    </nav> 
+      </nav>
 
     
 <header> <!-- ?!! Encabezado principal con logo y menú de navegación -->
-
-
-
+    <section id="inicio">
         <div class="logo"> <!-- ?!! Divicion  que conteine el logo de la empresa En el head -->
-         
-            <h2 class="tight-spacing">Arquitectura</h2>
-            <h2 class="tight-spacing">Benjamin</h2>
-
+           
             <img src="image/LOGO.png" alt="Logo Benjamin">
-    
+            
+            <h2>Arquitectura</h2>
+            <h2>Benjamin</h2>
         </div>
 
-        <div class="heder-img"> <!-- ?!! esto abria que cambiar el nombre de la clase proque no esta bueno esta es la imagen principla que es cuando ingresas la pagina poner un nombre de variable mas bonito. Ademast tener en cuenta como se usa en el css Comentar-->
+        <div class="header-img"> <!-- ?!! esto abria que cambiar el nombre de la clase proque no esta bueno esta es la imagen principla que es cuando ingresas la pagina poner un nombre de variable mas bonito. Ademast tener en cuenta como se usa en el css Comentar-->
             <img src="image/1.jpg" alt="Logo Benjamin">  <!-- ?!! ase referencia a la imagen al iniciar la pagina y el texto alternativo Que tendria que ser diferente si la imagen puede cargarse -->
-        </div> <!--fin class logo2-->
+        </div>
+</section>
+        <!--fin class logo2-->
         
         
         
         <!-- Menú de navegación principal  ?!! aca me gustaria crear un menu para ir a los diferentes sectores de la pagina Falta defir vei nlos mismos -->
 
-
-
-
-
-
-
-
     </header> 
 
     <!-- ?!! Segundo cuadro negro -- Sección Hero principal con título y eslogan ?!! Creo que esto seria la imagen principal de el disenio en el encabesado-->
-    <section class="hero">  
+    <section id="sobre-nosotros" class="hero">  
         <div>
             <img src="image/2.jpg" alt="hero-image"> <!-- ?!! Que hace alt= "hero-image" -->
         </div>
 
 
-        <div class="hero-content"> ,<
+        <div class="hero-content">
             <h1>Sobre Nosotros</h1>
             <p>En B+D, creemos que la arquitectura es mucho más que diseñar edificios.
                Es crear espacios que inspiran, que conectan a las personas con su entorno y que reflejan sus sueños y aspiraciones.</p>
@@ -80,7 +71,7 @@
 
 
      <!-- Sección de proyectos destacados -->
-     <section class="projects">
+     <section id="trabajo-seleccionado" class="projects">
         <h2>Trabajo Seleccionado</h2>
         <ul>
             <li>Un arquitecto con una trayectoria sólida y una amplia experiencia en el sector.</li>
@@ -105,7 +96,7 @@
         </div>
     </section>
 
-    <section class="why-us">
+    <section id="por-que-nosotros" class="why-us">
         <h2>Por qué nosotros</h2>
         <p class="why-us-text">Benjamín Diaz es un excelente comunicador y sabe transmitir sus ideas de forma clara y concisa.
             Su capacidad para trabajar en equipo y coordinar a diferentes profesionales asegura una colaboración fluida y eficiente durante todo el proceso.</p>
@@ -132,7 +123,7 @@
         </div>
     </section>
 
-    <section class="blog">
+    <section id="ultimos-proyectos" class="blog">
         <h2>Ultimos Proyectos</h2>
         <div class="blog-posts">
             <div class="blog-post">
@@ -153,7 +144,7 @@
 
     <!-- Pie de página con información de contacto -->
     <footer>
-        
+        <section id="contacto">
         <div class="logo">
             <img src="image/LOGO.png" alt="Logo de Arquitectura Benjamin">
         </div>
@@ -167,4 +158,5 @@
             <p><img src="image/Phone.png" alt="Telefono">(+598) 98 804 249</p>
             <p><img src="image/Location.png" alt="Ubicacion">General Flores 324, Artigas, Uruguay</p>
         </div>
+    </section>
     </footer>

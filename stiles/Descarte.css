@@ -53,26 +53,79 @@ header .logo {
 
 /* Bara superior titolo de la pagina*/ 
 /* ?!! Esot tendria que ser un natvar o algo mejor actuamente es un dir */
-.top-bar{
-    display: flex; /* Establece el contenedor como un contenedor flex, permitiendo el uso de Flexbox para alinear y distribuir el contenido */
-    
-    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
+.top-bar {
+    width: 100%;
     height: 100px; /* Ajusta la altura según sea necesario */
-    background-color: var(--secondary-color);  /* Color de la barra */
-
-    /* */
+    background-color: var(--secondary-color); /* Color de la barra */
     position: absolute; /* Fija la barra en la parte superior */
     top: 0;
     left: 0;
-    z-index: 1000px; /* Asegura que la barra esté por encima de otros elementos */
-    font-size: clamp(1rem, 3vw, 20px); /* Tamaño de fuente mínimo de 1rem, preferido de 3vw, y máximo de 20px */
-    
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    font-size: 32px; /* Tamaño de fuente */
+    display: flex;
     justify-content: center; /* Centrar el texto horizontalmente */
     align-items: center; /* Centrar el texto verticalmente */
     color: var(--accent-color);
+  }
+  
+  .top-bar ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Distribuye los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 100%; /* Asegura que la lista ocupe toda la altura de la barra */
+  }
+  
+  .top-bar li {
+    margin: 0 20px; /* Espacio entre los elementos de la lista */
+  }
+  
+  .top-bar a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: var(--accent-color);
+    font-size: 32px; /* Tamaño de fuente */
+  }
+  
+  /* Opcional: Estilos para cuando el mouse pasa por encima de los enlaces */
+  .top-bar a:hover {
+    color: black; /* Cambia el color al pasar el mouse */
+  }
+
+
+  nav {
+    background-color: var(--secondary-color); /* Using your primary color variable */
+    padding: 15px 0;
+    position: fixed; /* Makes the nav stay at top when scrolling */
+    top: 0;
+    z-index: 1; /* Ensures nav appears above other content */
+    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
+    height: 100px; /* Ajusta la altura según sea necesario */
+    color: white;  /* Color de la barra */
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the menu items */
+    color:white;
+}
 
+nav ul li {
+    margin: 0 15px;
+}
 
+nav ul li a {
+    color: var(--accent-color); /* This is your white color variable */
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    color:white;
+}
 
-/* --- Codigo para intentar poner el color texto de nav en blanco */
+nav ul li a:hover {
+    opacity: 0.8;
+}
