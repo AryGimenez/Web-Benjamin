@@ -15,40 +15,27 @@ body {
     margin: 0; /* Sin márgenes */
     padding: 0; /* Sin relleno */
     color: var(--secondary-color); /* Color del texto: color primario (negro) */
-    scroll-behavior: smooth;
 }
-
 
 /* Estilos para la cabecera (header) del sitio  La parte superior de la pagina donde esta la imagen y el logo*/
 header {
-    background-color: var(--secondary-color); /* Fondo blanco */
+    background: var(--secondary-color); /* Configuracion de fondo */
     padding: 0;
     /* !!? Talves aca usar un display:grid https://www.youtube.com/shorts/9LdiQ8iX6WQ */
-    display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
-    flex-direction: row; /* Define la dirección del eje principal como horizontal (de izquierda a derecha). */
-    justify-content: left; /* Distribuye los elementos hijos del contenedor flex con el máximo espacio posible entre ellos. */
-    align-items: auto; /* Alinea los elementos hijos del contenedor flex según su valor de alineación automática en el eje transversal (verticalmente). */ 
     font-family: var(--font2); /* Establece la fuente de los textos dentro del contenedor. Usa la variable para la fuente */
     font-size: 3vw; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
     margin-top: 100px; /* Añade un margen superior de 100 píxeles al contenedor. */
     color: var(--accent-color); /* Establece el color del texto utilizando la variable CSS --accent-color. */
 }
 
-#inicio {
-    display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
-    flex-direction: row; /* Define la dirección del eje principal como horizontal (de izquierda a derecha). */
-    justify-content: space-around; /* Distribuye los elementos hijos del contenedor flex con el máximo espacio posible entre ellos. */
-    align-items: center; /* Alinea los elementos hijos del contenedor flex según su valor de alineación automática en el eje transversal (verticalmente). */ 
-    
-}
 
 /* div de divicion par titulo del header y logo */
 header .logo {
     position: relative; /* Establece el contenedor como relativo para que los elementos hijos puedan posicionarse absolutamente dentro de él */
-    display: block; /* Cambia el comportamiento de la imagen a un elemento de bloque, eliminando el espacio en blanco debajo de la imagen. */
+    right: 150px;
+    display: block;
     max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor padre, evitando que la imagen se desborde del contenedor. */
     height: auto; /* Ajusta la altura de ala imagen automáticamente para mantener la proporción original de la imagen. */
-    
     /* ?!! esto esta interesante por lo que entendi me permiete aliniear elmentos uno ensima del otro y sentrar el log */
     /* https://www.youtube.com/watch?v=1Nv4HnZq6Lg&t=310s*/
     /* https://www.youtube.com/shorts/w3ndzpkxxP0 */
@@ -57,11 +44,11 @@ header .logo {
 
 header .logo h2 {
     margin: 0 3; /* Elimina el margen para que los elementos estén más juntos */
+    transform: translate(30vh, 0);
 }
 
 header .logo img {
-    margin-top: 20px; /* Añade un margen superior para separar el logo del texto */
-    margin-left: 100px;
+    transform: translate(50vh, 0);
 }
 
 /* Codigo a probar ------------------------*/
@@ -71,7 +58,7 @@ header .logo img {
 nav {
     background-color: var(--secondary-color); /* Using your primary color variable */
     padding: 15px 0;
-    position: fixed; /* Makes the nav stay at top when scrolling */
+    position: sticky; /* Makes the nav stay at top when scrolling */
     top: 0;
     z-index: 1; /* Ensures nav appears above other content */
     width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
@@ -113,34 +100,23 @@ nav ul li a:hover {
 /* Div contenedora de la Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
 .header-img {
     /*Documentacion properti flex: https://developer.mozilla.org/es/docs/Web/CSS/flex */
-    display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
-    justify-content: flex-end; /* Alinea los elementos hijos del contenedor flex al final del eje principal (horizontalmente, en la mayoría de los casos). */
-    align-items: center; /* Alinea los elementos hijos del contenedor flex en el centro del eje transversal (verticalmente, en la mayoría de los casos). */
-    flex-grow: 1; /* Permite que el contenedor crezca para llenar el espacio disponible en el contenedor padre. */
-    position: absolute;
-    right:0;
+    position:absolute;
+    display: block;
+    left: 30%;
+    bottom: 0.5vh;
 }
 
 
-/* Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
-.header-img img {
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 
 /* Asegúrate de que el texto dentro del header esté alineado correctamente */
 header .text {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: start;
-    height: 100%;
     margin-right: 35%;
     color: var(--accent-color);
 }
@@ -304,16 +280,17 @@ nav ul li {
 .why-us {
     background-color: var(--secondary-color);
     color: var(--accent-color);
+    border-radius: 16px;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     text-align: center;
     padding: 20px;
     position: relative;
-    width: 100%;
+    left: 100px;
+    width: calc(100% - 140px);
     height: 400px;
-    margin-left: 120px;
 }
 
 .why-us h2 {
@@ -358,7 +335,7 @@ nav ul li {
     justify-content: flex-end;
     position: absolute;
     bottom: 200px;
-    top: 375px;
+    top: 365px;
     left: 1100px;
     width: 300px;
     z-index: 1;
@@ -427,6 +404,7 @@ nav ul li {
     margin-top: 160px;
     margin-left: 100px;
     margin-right: 100px;
+    border-radius: 16px;
 }
 
 .blog h2 {
@@ -444,6 +422,7 @@ nav ul li {
     align-items: center;
     transform: translateY(190px);
     gap: 50px; /* Espacio entre las imágenes */
+    border-radius: 16px;
     
 }
 
@@ -451,6 +430,7 @@ nav ul li {
     max-width: 100%; /* Ancho de las imágenes */
     height: 480px;
     text-align: center;
+    border-radius: 16px;
 }
 
 .blog-post img {
@@ -522,11 +502,4 @@ footer .contact img {
     margin-right: 20px;
 }
 
-
-
-/* Codigo Ari agregar color para direrenciar div imagenes*/
-
-.project {
-    background-color: #ffcc00; /* Color de fondo amarillo */
-}
 
