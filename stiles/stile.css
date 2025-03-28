@@ -9,22 +9,22 @@
 }
 
 
-/* Estilos generales para el cuerpo del documento */
+/* Ajustes generales */
 body {
-    font-family: Arial, sans-serif; /* Fuente de letra sans-serif */
-    margin: 0; /* Sin márgenes */
-    padding: 0; /* Sin relleno */
-    color: var(--secondary-color); /* Color del texto: color primario (negro) */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--secondary-color);
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 /* Estilos para la cabecera (header) del sitio  La parte superior de la pagina donde esta la imagen y el logo*/
 header {
-    background: var(--secondary-color); /* Configuracion de fondo */
+    background-color: var(--secondary-color); /* Configuracion de fondo */
     padding: 0;
-    /* !!? Talves aca usar un display:grid https://www.youtube.com/shorts/9LdiQ8iX6WQ */
     font-family: var(--font2); /* Establece la fuente de los textos dentro del contenedor. Usa la variable para la fuente */
-    font-size: 3vw; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
-    margin-top: 100px; /* Añade un margen superior de 100 píxeles al contenedor. */
+    font-size: 3rem; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
+    margin-top: 50px; /* Añade un margen superior de 100 píxeles al contenedor. */
     color: var(--accent-color); /* Establece el color del texto utilizando la variable CSS --accent-color. */
 }
 
@@ -43,12 +43,30 @@ header .logo {
 }
 
 header .logo h2 {
-    margin: 0 3; /* Elimina el margen para que los elementos estén más juntos */
-    transform: translate(30vh, 0);
+    margin: 0 2; /* Elimina el margen para que los elementos estén más juntos */
+    transform: translate(30vh, 0); /* Desplaza el texto 20 píxeles a la derecha y 0 píxeles hacia abajo */
 }
 
 header .logo img {
-    transform: translate(50vh, 0);
+    transform: translate(40vh, 0); /* Desplaza la imagen 20 píxeles a la derecha y 0 píxeles hacia abajo */
+}
+
+.header-img {
+    /*Documentacion properti flex: https://developer.mozilla.org/es/docs/Web/CSS/flex */
+    position:absolute;
+    left: 37%;
+    bottom: 0.5vh; /* Posiciona la imagen en la parte inferior del contenedor */
+}
+
+/* Asegúrate de que el texto dentro del header esté alineado correctamente */
+header .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-right: 35%;
+    color: var(--accent-color);
 }
 
 /* Codigo a probar ------------------------*/
@@ -75,7 +93,6 @@ nav ul {
     display: flex;
     justify-content: center; /* Centers the menu items */
     color:white;
-    text-decoration: underline;
 }
 
 nav ul li {
@@ -85,40 +102,15 @@ nav ul li {
 nav ul li a {
     color: var(--accent-color); /* This is your white color variable */
     text-decoration: none;
-    font-size: 2.4vh;
+    font-size: 1.2rem;
     transition: 0.3s;
     color:var(--accent-color);
 }
 
 nav ul li a:hover {
     opacity: 0.8;
-}
-
-
-/* ----------------------------------------*/
-
-/* Div contenedora de la Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
-.header-img {
-    /*Documentacion properti flex: https://developer.mozilla.org/es/docs/Web/CSS/flex */
-    position:absolute;
-    display: block;
-    left: 30%;
-    bottom: 0.5vh;
-}
-
-
-
-
-
-/* Asegúrate de que el texto dentro del header esté alineado correctamente */
-header .text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: start;
-    margin-right: 35%;
-    color: var(--accent-color);
+    font-size: 1.5rem; /* Cambia el tamaño de la fuente al pasar el mouse */
+    text-decoration: underline; /* Añade subrayado al texto al pasar el mouse */
 }
 
 /* Estilos para la lista de navegación */
@@ -137,41 +129,48 @@ nav ul li {
 
 /* Estilos para la sección principal (hero) */
 .hero {
-    background-size: cover; /* La imagen cubre todo el espacio disponible */
-    background-position: center; /* Centrar la imagen de fondo */
-    height: 620px; /* Altura de la sección: 500 píxeles */
+    height: auto; /* Altura de la sección: 500 píxeles */
     display: flex; /* Uso de flexbox */
+    flex-direction: row; /* Dirección de los elementos: columna */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     text-align: center;
     background-color: var(--primary-color);
-    margin-top: 100px;
-    margin-right: 120px;
+    padding: 50px 20px; /* Relleno de 50 píxeles en la parte superior e inferior y 20 píxeles a los lados */
 }
 .hero img{
-    height: 550px;
-    width: 580;
-    margin-top: 60px;
+    max-height: 550px;
+    max-width: 580px;
+    margin-top: 20px;
+}
+
+.hero-img {
+    height: auto; /* Ajusta automáticamente la altura */
+    width: 100%; /* Asegura que no se desborde */
 }
 
 /* Estilos para el contenido dentro de la sección hero */
 .hero-content {
     text-align: center;
     color: var(--accent-color); /* Color del texto: color secundario (blanco) */
+
 }
 
 /* Estilos para el título principal dentro de la sección hero */
 .hero-content h1 {
-    text-align: center;
-    font-size: 46px; /* Tamaño de la fuente: 3 veces el tamaño normal */
-    margin-bottom: 120px; /* Margen inferior de 20 píxeles */
+    text-align: center; /* Centrar el texto */
+    font-size: 2.5rem; /* Tamaño de la fuente: 3 veces el tamaño normal */
+    margin-bottom: 60px; /* Margen inferior de 20 píxeles */
     text-decoration: underline;
 }
 .hero-content p{
     text-align: center;
-    font-size: 32px;
+    font-size: 1.2rem;
     margin-bottom: 20px;
+    line-height: 2.5;
 }
+
+
 /* Estilos para las secciones de "Sobre nosotros", "Proyectos", "Por qué nosotros", "Blog" y "Clientes" */
 .about, .projects, .why-us, .blog, .clients {
     padding: 50px; /* Relleno de 50 píxeles */
@@ -194,12 +193,16 @@ nav ul li {
 
 .content-container {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
     justify-content: space-between;
 }
 
 .image-container {
-    width: 60%; /* Aumentado a 60% */
-    position: relative;
+    flex: 1 1 60%; /* Ajusta el ancho relativo */
+}
+
+.right-section {
+    flex: 1 1 35%; /* Ajusta el ancho relativo */
 }
 
 .casas {
@@ -281,11 +284,11 @@ nav ul li {
     background-color: var(--secondary-color);
     color: var(--accent-color);
     border-radius: 16px;
-    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-align: center;
+    text-align: start;
     padding: 20px;
     position: relative;
     left: 100px;
@@ -303,13 +306,9 @@ nav ul li {
 .why-us-text {
     line-height: 1.6;
     margin-bottom: 30px;
-    max-width: 1100px;
-    height: 367px;
-    text-align: left;
+    max-width: 1200px;
     position: absolute;
     top: 200px;
-    bottom: auto;
-    left: auto;
     right: 150px;
 }
 
@@ -502,4 +501,27 @@ footer .contact img {
     margin-right: 20px;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
 
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .why-us {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .blog-post {
+        max-width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

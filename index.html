@@ -5,20 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- ?!! esto ne se lo que es -->
+    <meta name="description" content="Arquitectura Benjamin: Diseño de espacios que inspiran y conectan a las personas con su entorno.">
+    <meta name="author" content="Benjamin Diaz">
     <title>Arquitectura Benjamin</title> <!-- Título de la página -->
     
     <!-- Enlace a la hoja de estilos principal -->
     <link rel="stylesheet" href="stiles/stile.css">
     
     <!-- Enlace a AOS CSS ?!! esto no se si va creo que es el efecto que uso esteban para acer apareser las imagenes -->
-     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
 </head>
 
 
 <body>
     <!-- Encabezado principal con logo y menú de navegación -->
-    <nav class="top-bar">
+    <nav class="top-bar" aria-label="Menú de navegación principal">
         
         <ul>
           <li><a href="#inicio">Inicio</a></li>
@@ -53,7 +55,7 @@
     <!-- ?!! Segundo cuadro negro -- Sección Hero principal con título y eslogan ?!! Creo que esto seria la imagen principal de el disenio en el encabesado-->
     <section id="sobre-nosotros" class="hero">  
         <div>
-            <img src="image/2.jpg" alt="hero-image"> <!-- ?!! Que hace alt= "hero-image" -->
+            <img src="image/2.jpg" alt="hero-image" class="hero-img"> <!-- ?!! Que hace alt= "hero-image" -->
         </div>
 
 
@@ -156,3 +158,8 @@
         </div>
     </section>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
