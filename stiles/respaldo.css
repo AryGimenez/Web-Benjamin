@@ -112,7 +112,7 @@ nav ul li a {
 }
 
 .about, .projects, .why-us, .blog, .clients {
-    padding: 50px;
+    padding: 0;
     text-align: left;
 }
 

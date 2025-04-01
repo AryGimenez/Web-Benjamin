@@ -3,127 +3,108 @@
     --primary-color: #070F0F; /* Color primario: negro */
     --secondary-color: #101420; /* Color secundario: blanco */
     --accent-color: #ffffff; /* Color de acento: gris claro */
-    --font1: sans-sherif;  
+    --font1: 'sans-sherif';  
     --font2: Arial;/* Ibarra-Real-Nova; */
 
 }
 
-/* Estilos generales para el cuerpo del documento */
-body {
-    font-family: Arial, sans-serif; /* Fuente de letra sans-serif */
-    margin: 0; /* Sin márgenes */
-    padding: 0; /* Sin relleno */
-    color: var(--secondary-color); /* Color del texto: color primario (negro) */
-}
 
+/* Ajustes generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--secondary-color);
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
+    
+}
 
 /* Estilos para la cabecera (header) del sitio  La parte superior de la pagina donde esta la imagen y el logo*/
 header {
-    background-color: var(--secondary-color); /* Fondo blanco */
-    padding-top: 2vw; /* ↑ Borde superior interior  */
-    padding-right: 0px; /* → Borde derecho interior */ 
-    padding-bottom: 0px; /* ↓ Borde inferior interior */
-    padding-left: 2vw; /* ← Borde izquierdo interior de */
-    /* !!? Talves aca usar un display:grid https://www.youtube.com/shorts/9LdiQ8iX6WQ */
-    display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
-    flex-direction: row; /* Define la dirección del eje principal como horizontal (de izquierda a derecha). */
-    justify-content: space-between; /* Distribuye los elementos hijos del contenedor flex con el máximo espacio posible entre ellos. */
-    align-items: auto; /* Alinea los elementos hijos del contenedor flex según su valor de alineación automática en el eje transversal (verticalmente). */
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--secondary-color); /* Configuracion de fondo */
+    padding: 20px;
     font-family: var(--font2); /* Establece la fuente de los textos dentro del contenedor. Usa la variable para la fuente */
-    font-size: 3vw; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
-    margin-top: 100px; /* Añade un margen superior de 100 píxeles al contenedor. */
+    font-size: 4vw; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
+    margin-top: 0px; /* Añade un margen superior de 100 píxeles al contenedor. */
     color: var(--accent-color); /* Establece el color del texto utilizando la variable CSS --accent-color. */
 }
 
 
 /* div de divicion par titulo del header y logo */
 header .logo {
-    position: relative; /* Establece el contenedor como relativo para que los elementos hijos puedan posicionarse absolutamente dentro de él */
-    display: block; /* Cambia el comportamiento de la imagen a un elemento de bloque, eliminando el espacio en blanco debajo de la imagen. */
-    max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor padre, evitando que la imagen se desborde del contenedor. */
-    height: auto; /* Ajusta la altura de ala imagen automáticamente para mantener la proporción original de la imagen. */
-    
-    /* ?!! esto esta interesante por lo que entendi me permiete aliniear elmentos uno ensima del otro y sentrar el log */
-    /* https://www.youtube.com/watch?v=1Nv4HnZq6Lg&t=310s*/
-    /* https://www.youtube.com/shorts/w3ndzpkxxP0 */
-   
-}
-
-header .logo h2 {
-    margin: 0; /* Elimina el margen para que los elementos estén más juntos */
+    display: flex; /* Usa flexbox para alinear los elementos dentro del contenedor. */
+    flex-direction: column; /* Establece la dirección de los elementos dentro del contenedor. */
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos dentro del contenedor al centro. */
+    max-width: 60%; /* Establece el ancho máximo del contenedor. */
 }
 
 header .logo img {
-    margin-top: 10px; /* Añade un margen superior para separar el logo del texto */
+    height: auto; /* Ajusta la altura de la imagen automáticamente para mantener la proporción original de la imagen. */
+    transform: translate(15vw, 0); /* Desplaza la imagen 20 píxeles a la derecha y 0 píxeles hacia abajo */
+    max-width: 100%;
 }
 
-/* Codigo a probar ------------------------*/
+header .logo h2 {
+    margin: 0 2; /* Elimina el margen para que los elementos estén más juntos */
+    transform: translate(20vh, 0); /* Desplaza el texto 20 píxeles a la derecha y 0 píxeles hacia abajo */
+    font-size: 3vw; /* Establece el tamaño de la fuente del texto dentro del contenedor. */
+}
+
+
+
+.header-img {
+    margin-left: 635px;
+    margin-top: -500px;
+    max-width: 40%;
+    height: auto;
+}
 
 
 /* Navigation styling */
 nav {
-    background-color: var(--primary-color); /* Using your primary color variable */
+    background-color: var(--secondary-color); /* Using your primary color variable */
     padding: 15px 0;
-    position: fixed; /* Makes the nav stay at top when scrolling */
-    width: 100%;
+    position: sticky; /* Makes the nav stay at top when scrolling */
     top: 0;
-    z-index: 1000; /* Ensures nav appears above other content */
+    z-index: 1; /* Ensures nav appears above other content */
+    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
+    height: 2vw ; /* Ajusta la altura según sea necesario */
+    color: var(--accent-color);  /* Color de la barra */
+
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    position: relative;
+    top: 12px;
     display: flex;
     justify-content: center; /* Centers the menu items */
+    align-items: center;
+    flex-wrap: wrap;
+    color:white;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: var(--accent-color); /* This is your white color variable */
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    opacity: 0.8;
-}
-/* ----------------------------------------*/
-
-/* Div contenedora de la Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
-.heder-img {
-    /*Documentacion properti flex: https://developer.mozilla.org/es/docs/Web/CSS/flex */
-    display: flex; /* Establece el contenedor como un contenedor flex, lo que permite el uso de las propiedades de Flexbox para alinear y distribuir el contenido dentro del contenedor. */
-    justify-content: flex-end; /* Alinea los elementos hijos del contenedor flex al final del eje principal (horizontalmente, en la mayoría de los casos). */
-    align-items: center; /* Alinea los elementos hijos del contenedor flex en el centro del eje transversal (verticalmente, en la mayoría de los casos). */
-    flex-grow: 1; /* Permite que el contenedor crezca para llenar el espacio disponible en el contenedor padre. */
+    opacity:0.8;
+    font-size: 1.3rem; /* Cambia el tamaño de la fuente al pasar el mouse */
+    text-decoration: underline; /* Añade subrayado al texto al pasar el mouse */
 }
 
-
-/* Imagen del header de la pagian la primera imagen que aparece en la pagianmagen del header de la pagian la primera imagen que aparece en la pagian */
-.heder-img img {
-    max-width: 100%;
-    height: auto;
-    margin-left: 0;
-    display: block;
-}
-
-
-/* Asegúrate de que el texto dentro del header esté alineado correctamente */
-header .text {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    margin-right: 35%;
-    color: var(--accent-color);
-    text-align: center;
-}
 /* Estilos para la lista de navegación */
 nav ul {
     list-style: none; /* Sin viñetas */
@@ -137,62 +118,69 @@ nav ul li {
     margin-left: 20px; /* Margen izquierdo de 20 píxeles */
 }
 
-/* Estilos para los enlaces dentro de la lista de navegación */
-nav ul li a {
-    text-decoration: none; /* Sin subrayado */
-    color: var(--primary-color); /* Color del texto: color primario (negro) */
-}
 
 /* Estilos para la sección principal (hero) */
 .hero {
-    background-size: cover; /* La imagen cubre todo el espacio disponible */
-    background-position: center; /* Centrar la imagen de fondo */
-    height: 620px; /* Altura de la sección: 500 píxeles */
+    height: auto; /* Altura de la sección: 500 píxeles */
     display: flex; /* Uso de flexbox */
+    flex-direction: row; /* Dirección de los elementos: columna */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     text-align: center;
     background-color: var(--primary-color);
     margin-top: 100px;
-    margin-right: 120px;
+    width: calc(100% - 100px);
 }
 .hero img{
-    height: 550px;
-    width: 580;
-    margin-top: 60px;
+    max-height: 550px;
+    max-width: 580px;
+    margin-top: 20px;
+}
+
+.hero-img {
+    height: auto; /* Ajusta automáticamente la altura */
+    width: 100%; /* Asegura que no se desborde */
 }
 
 /* Estilos para el contenido dentro de la sección hero */
 .hero-content {
     text-align: center;
     color: var(--accent-color); /* Color del texto: color secundario (blanco) */
+
 }
 
 /* Estilos para el título principal dentro de la sección hero */
 .hero-content h1 {
-    text-align: center;
-    font-size: 46px; /* Tamaño de la fuente: 3 veces el tamaño normal */
-    margin-bottom: 120px; /* Margen inferior de 20 píxeles */
+    text-align: center; /* Centrar el texto */
+    font-size: 2.5rem; /* Tamaño de la fuente: 3 veces el tamaño normal */
+    margin-bottom: 60px; /* Margen inferior de 20 píxeles */
+    text-decoration: underline;
 }
 .hero-content p{
     text-align: center;
-    font-size: 32px;
+    font-size: 1.2rem;
     margin-bottom: 20px;
+    line-height: 2.5;
 }
+
+
 /* Estilos para las secciones de "Sobre nosotros", "Proyectos", "Por qué nosotros", "Blog" y "Clientes" */
 .about, .projects, .why-us, .blog, .clients {
     padding: 50px; /* Relleno de 50 píxeles */
     text-align: left; /* Texto centrado */
+    margin-top: 100px;
 }
 
 .projects h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #333;
+    text-decoration: underline;
 }
 
 .projects ul {
     list-style-type: disc;
+    font-size: 1.2rem;
     padding-left: 20px;
     margin-bottom: 30px;
     color: #555;
@@ -200,12 +188,16 @@ nav ul li a {
 
 .content-container {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
     justify-content: space-between;
 }
 
 .image-container {
-    width: 60%; /* Aumentado a 60% */
-    position: relative;
+    flex: 1 1 60%; /* Ajusta el ancho relativo */
+}
+
+.right-section {
+    flex: 1 1 35%; /* Ajusta el ancho relativo */
 }
 
 .casas {
@@ -236,7 +228,8 @@ nav ul li a {
 }
 
 .right-section {
-    width: 35%; /* Reducido a 35% */
+    width: 40%; /* Reducido a 35% */
+    font-size: 1.2rem;
     padding-left: 20px;
     text-align: left;
 }
@@ -263,7 +256,6 @@ nav ul li a {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
     margin-top: 30px;
 }
 
@@ -286,34 +278,31 @@ nav ul li a {
 .why-us {
     background-color: var(--secondary-color);
     color: var(--accent-color);
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    position: relative;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: start;
+    padding: 50px;
+    position: relative;
+    left: 100px;
+    max-width: 100%;
     height: 400px;
-    margin-left: 120px;
 }
 
 .why-us h2 {
     font-size: 2.5em;
     position: relative;
-    bottom: 100px;
+    text-decoration: underline;
 }
 
 .why-us-text {
     line-height: 1.6;
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    max-width: 1100px;
-    height: 367px;
-    text-align: left;
+    max-width: 1200px;
     position: absolute;
     top: 200px;
-    bottom: auto;
-    left: auto;
     right: 150px;
 }
 
@@ -340,7 +329,7 @@ nav ul li a {
     position: absolute;
     bottom: 200px;
     top: 375px;
-    left: 1100px;
+    left: 1050px;
     width: 300px;
     z-index: 1;
 }
@@ -367,7 +356,7 @@ nav ul li a {
 }
 
 .icon p {
-    margin-top: 10px;
+    margin-top: 5px;
     color: #333;
     font-size: 16px;
 }
@@ -388,6 +377,7 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     margin: 0 10px;
+
 }
 
 .icon img {
@@ -404,50 +394,52 @@ nav ul li a {
     background-color: var(--secondary-color); /* Color de fondo */
     padding: 40px;
     text-align: center;
-    margin-top: 200px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 160px 100px;
+    border-radius: 16px;
 }
 
 .blog h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
     color: var(--accent-color);
+    position: relative;
+    text-decoration: underline;
 }
 
 .blog-posts {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    transform: translateY(190px);
+    transform: translateY(90px);
     gap: 100px; /* Espacio entre las imágenes */
+    border-radius: 16px;
     
 }
 
 .blog-post {
-    width: 370px; /* Ancho de las imágenes */
-    height: 480px;
+    max-width: 100%; /* Ancho de las imágenes */
+    height: 500px;
     text-align: center;
 }
 
 .blog-post img {
     width: 100%;
     height: auto;
-    border-radius: 5px; /* Bordes redondeados */
     margin-bottom: 10px;
 }
 
 .blog-post p {
-    border-radius: 10px;
-    background-color: var(--secondary-color);
+    border-radius: 6px;
+    background-color: var(--primary-color);
     text-align: center;
-    position:relative;
+    position: relative;
     left: 10px;
-    bottom: 25px;
-    transform: translateY(-40px);
+    bottom: 20px;
+    transform: translateY(-45px);
     width: 350px;
-    height: 97px;
-    font-size: 1.1em;
+    height: 100px;
+    font-size: 1.3rem;
+    line-height: 1.7;
     color: var(--accent-color);
     z-index: 1;
 }
@@ -456,45 +448,70 @@ nav ul li a {
 
 footer {
     background-color: var(--secondary-color); /* Fondo: color de la imagen de referencia */
+    background-size: cover;
     padding: 20px; /* Relleno */
     display: flex; /* Usamos flexbox para alinear los elementos */
-    justify-content: space-around; /* Espacio entre los elementos */
+    justify-content:space-around; /* Espacio entre los elementos */
     align-items: center; /* Centramos verticalmente */
     color: var(--accent-color); /* Color del texto */
-    margin-top: 300px;
+    margin-top: 30vh;
 }
 
 footer .logo img {
-    width: 135px;
-    height: 135px; /* Altura del logo */
+    width: 20vh;
+    height: auto; /* Altura del logo */
     border-radius: 50%; /* Hace el logo circular */
-    position: relative;
-    left: -100px;
+    position: absolute;
+    left: 0;
 }
 
 footer .contact {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre los elementos */
+    gap: 0; /* Espacio entre los elementos */
     position: relative;
-    left: -90px;
+    left: -15vw;
+    top: 1vw;
 }
 
 footer .contact-items {
     display: flex;
     flex-direction: row;
     align-items: center; /* Centramos verticalmente los iconos */
-    gap: 100px; /* Espacio entre el icono y el texto */
+    gap: 5vw; /* Espacio entre el icono y el texto */
+    margin: 0 10px;
+    position: relative;
+    left: 10vw;
+    bottom: 3vw;
 }
+
 
 footer .contact img {
-    height: 25px; /* Altura de los iconos */
+    height: 30px; /* Altura de los iconos */
+    margin-right: 20px;
 }
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Codigo Ari agregar color para direrenciar div imagenes*/
+    header .logo {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.project {
-    background-color: #ffcc00; /* Color de fondo amarillo */
+    header .header-img img {
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
-
