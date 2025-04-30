@@ -1,0 +1,477 @@
+:root {
+    --primary-color: #070F0F; /* Color primario: negro */
+    --secondary-color: #101420; /* Color secundario: blanco */
+    --accent-color: #ffffff; /* Color de acento: gris claro */
+    --font1: 'sans-sherif';  
+    --font2: Arial;/* Ibarra-Real-Nova; */
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: var(--secondary-color); /* Color de fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+    display: flex; /* Lo mantenemos para la disposición interna */
+    align-items: center;
+    padding-left: 50px;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+/* Estilos para la parte izquierda del header (logo, título y navegación) */
+.left-header {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+/* Contenedor del logo y título */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px; /* Espacio entre el logo y la navegación */
+}
+
+/* Estilos para la imagen del logo */
+.site-title {
+    margin-top: 30px;
+}
+/* Título del sitio */
+.site-title h1 {
+    margin: 0;
+    line-height: 1.3;
+    font-size: 3rem;
+}
+
+.site-title h1:last-child {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* Estilos para la navegación principal */
+.main-nav ul {
+    background-color: var(--secondary-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    opacity: 1;
+}
+
+/* Estilos para la parte derecha del header (imagen) */
+.right-header {
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+.right-header img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: auto;
+    display: block; /* Evita espacios innecesarios debajo de la imagen */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+}
+
+.sobre-nosotros {
+    display: flex;
+    background-color: var(--primary-color); /* Fondo oscuro como en la imagen */
+    color: #fff;
+    margin-top: 100px;
+    margin-right: 50px;
+    padding: 40px;
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.imagen-sobre-nosotros {
+    flex: 1; /* Ocupa el espacio disponible */
+    margin-right: 40px; /* Espacio entre la imagen y el texto */
+}
+
+.imagen-sobre-nosotros img {
+    width: auto;
+    height: auto;
+    display: block; /* Evita espacios innecesarios debajo de la imagen */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+}
+
+.texto-sobre-nosotros {
+    flex: 1; /* Ocupa el espacio disponible */
+    max-width: 500px; /* Ancho máximo para el texto */
+}
+
+.texto-sobre-nosotros h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.separador {
+    border-bottom: 1px solid #fff;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.texto-sobre-nosotros p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.boton-leer-mas {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-leer-mas:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.proyecto-destacado {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Apilamos los bloques principales verticalmente */
+}
+
+.titulo-proyecto {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #333; /* Color del título */
+}
+
+.descripcion-proyecto {
+    max-width: 400px;
+    margin-bottom: 20px; /* Espacio debajo del texto */
+}
+
+.descripcion-proyecto ul {
+    list-style: disc;
+    padding-left: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.imagenes-proyecto {
+    display: flex;
+    position: relative; /* Contenedor relativo para la superposición */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 600px; /* Ancho máximo para las imágenes */
+    align-self: center; /* Centra horizontalmente el contenedor de imágenes */
+}
+
+.imagen-principal {
+    position: relative; /* Posicionamiento absoluto para la superposición */
+    top: 100px;
+    right: 450px;
+    width: 100%; /* Ajusta el ancho de la imagen principal */
+    height: auto;
+    z-index: 1;
+}
+
+.imagen-principal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.boton-ver-caso {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Asegura que el botón esté encima de la imagen */
+}
+
+.boton-ver-caso:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.imagen-secundaria {
+    position: absolute; /* Posicionamiento absoluto para la superposición */
+    bottom: 100px;
+    left: -150px;
+    width: 100%; /* Ajusta el ancho de la imagen secundaria */
+    height: auto;;
+}
+
+.imagen-secundaria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info-proyecto {
+    max-width: 400px;
+    margin-top: 20px; /* Espacio encima del texto de info */
+
+}
+
+.info-proyecto h2 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-proyecto p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.navegacion-proyecto {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.navegacion-proyecto a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.navegacion-proyecto a:hover {
+    color: #0056b3;
+}
+
+
+/* **Diseño Responsivo con Media Queries** */
+
+/* Para pantallas más pequeñas (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Centra el texto */
+        padding: 15px;
+    }
+
+    .left-header {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-circle {
+        width: 50px;
+        height: 50px;
+        margin-right: 0; /* Centrar la imagen del logo */
+        margin-bottom: 10px; /* Espacio debajo del logo */
+    }
+
+    .logo-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-container h1:last-child {
+        font-size: 1.8rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .right-header {
+        width: 100%; /* La imagen ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .right-header img {
+        margin-top: 20px; /* Espacio entre la navegación y la imagen */
+    }
+
+    .sobre-nosotros {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        text-align: center; /* Centra el texto */
+        padding: 30px;
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .imagen-sobre-nosotros {
+        margin-right: 0;
+        margin-bottom: 30px;
+        max-width: 80%; /* La imagen ocupa más ancho en pantallas pequeñas */
+    }
+
+    .texto-sobre-nosotros {
+        max-width: 80%; /* El texto ocupa más ancho en pantallas pequeñas */
+    }
+
+    .texto-sobre-nosotros h2 {
+        font-size: 2rem;
+    }
+
+    .separador {
+        margin: 20px auto; /* Centra el separador */
+    }
+
+    .proyecto-destacado {
+        padding: 30px;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .titulo-proyecto {
+        font-size: 2.5rem;
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+
+    .descripcion-proyecto {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .imagenes-proyecto {
+        width: 80%;
+        max-width: none;
+        flex-direction: column; /* Apila las imágenes en pantallas pequeñas */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .imagen-principal {
+        position: relative; /* Vuelve a ser relativo para apilar */
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-bottom: 20px; /* Espacio entre las imágenes */
+    }
+
+    .imagen-secundaria {
+        position: relative; /* Vuelve a ser relativo para apilar */
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .info-proyecto {
+        max-width: 80%;
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .navegacion-proyecto {
+        justify-content: center;
+    }
+}
+
+
+
+/* Para pantallas aún más pequeñas (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-title h1 {
+        font-size: 1rem;
+    }
+
+    .site-title h1:last-child {
+        font-size: 1.5rem;
+    }
+
+    .main-nav ul li a {
+        font-size: 1rem;
+    }
+
+    .right-header h1 {
+        font-size: 1rem;
+    }
+
+    .sobre-nosotros {
+        padding: 20px;
+    }
+
+    .imagen-sobre-nosotros {
+        max-width: 95%;
+    }
+
+    .texto-sobre-nosotros {
+        max-width: 95%;
+        font-size: 1rem;
+    }
+
+    .texto-sobre-nosotros h2 {
+        font-size: 1.8rem;
+    }
+
+    .boton-leer-mas {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+   .proyecto-destacado {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .descripcion-proyecto {
+        max-width: 95%;
+        font-size: 0.9rem;
+    }
+
+    .imagenes-proyecto {
+        width: 95%;
+    }
+
+    .info-proyecto {
+        max-width: 95%;
+        font-size: 0.9rem;
+    }
+
+    .info-proyecto h2 {
+        font-size: 1.8rem;
+    }
+
+    .navegacion-proyecto a {
+        font-size: 0.8rem;
+    }
+}
