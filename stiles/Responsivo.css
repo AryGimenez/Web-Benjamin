@@ -85,7 +85,6 @@ header {
     width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
     height: auto;
     display: block; /* Evita espacios innecesarios debajo de la imagen */
-    border-radius: 5px; /* Opcional: bordes redondeados */
 }
 
 .sobre-nosotros {
@@ -93,21 +92,19 @@ header {
     background-color: var(--primary-color); /* Fondo oscuro como en la imagen */
     color: #fff;
     margin-top: 100px;
-    margin-right: 50px;
-    padding: 40px;
+    width: calc(100% - 2.5%);
+    padding: 20px;
     align-items: center; /* Centra verticalmente los elementos */
+    box-sizing: border-box;
 }
 
 .imagen-sobre-nosotros {
     flex: 1; /* Ocupa el espacio disponible */
-    margin-right: 40px; /* Espacio entre la imagen y el texto */
+    margin-right: 30px; /* Espacio entre la imagen y el texto */
 }
 
 .imagen-sobre-nosotros img {
-    width: auto;
-    height: auto;
-    display: block; /* Evita espacios innecesarios debajo de la imagen */
-    border-radius: 5px; /* Opcional: bordes redondeados */
+    width: 70%;
 }
 
 .texto-sobre-nosotros {
@@ -154,21 +151,12 @@ header {
     padding: 40px;
     gap: 40px;
     align-items: flex-start;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-direction: column; /* Apilamos los bloques principales verticalmente */
 }
 
-.titulo-proyecto {
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 20px; /* Espacio debajo del título */
-    color: #333; /* Color del título */
-}
-
 .descripcion-proyecto {
-    max-width: 400px;
+    margin-top: 100px;
+    margin-left: 100px;
     margin-bottom: 20px; /* Espacio debajo del texto */
 }
 
@@ -183,17 +171,16 @@ header {
     display: flex;
     position: relative; /* Contenedor relativo para la superposición */
     width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: 600px; /* Ancho máximo para las imágenes */
+    max-width: 500px; /* Ancho máximo para las imágenes */
     align-self: center; /* Centra horizontalmente el contenedor de imágenes */
 }
 
 .imagen-principal {
-    position: relative; /* Posicionamiento absoluto para la superposición */
-    top: 100px;
-    right: 450px;
+    position: absolute; /* Posicionamiento absoluto para la superposición */
+    top: 2vw;
+    right: 10vw;
     width: 100%; /* Ajusta el ancho de la imagen principal */
     height: auto;
-    z-index: 1;
 }
 
 .imagen-principal img {
@@ -203,54 +190,36 @@ header {
     object-fit: cover;
 }
 
-.boton-ver-caso {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    z-index: 1; /* Asegura que el botón esté encima de la imagen */
-}
-
-.boton-ver-caso:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-}
 
 .imagen-secundaria {
     position: absolute; /* Posicionamiento absoluto para la superposición */
-    bottom: 100px;
-    left: -150px;
+    top: 10vw;
+    right: 22vw;
     width: 100%; /* Ajusta el ancho de la imagen secundaria */
-    height: auto;;
+    height: auto;
 }
 
 .imagen-secundaria img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
     object-fit: cover;
 }
 
 .info-proyecto {
     max-width: 400px;
     margin-top: 20px; /* Espacio encima del texto de info */
-
+    margin-left: 60vw;
 }
 
 .info-proyecto h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 10px;
     color: #333;
 }
 
 .info-proyecto p {
-    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #555;
@@ -272,9 +241,101 @@ header {
     color: #0056b3;
 }
 
+.por-que-nosotros {
+    display: flex;
+    margin-top: 350px;
+    position: relative; /* Necesario para posicionar el bloque izquierdo */
+}
+
+.bloque-izquierdo {
+    background-color: #bebebe; /* Fondo gris más oscuro */
+    color: black;
+    padding: 40px;
+    max-width: 400px;
+    position: absolute; /* Permite superponer */
+    top: 110%;
+    left: 30px;
+    transform: translateY(-50%); /* Centra verticalmente */
+    z-index: 10; /* Asegura que esté encima del bloque derecho */
+}
+
+.bloque-izquierdo p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.bloque-derecho {
+    flex: 1;
+    background-color: var(--primary-color); /* Fondo oscuro */
+    color: #fff;
+    padding: 40px;
+    margin-left: 200px;
+    position: relative; /* Para posicionar las características */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloque-derecho h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.bloque-derecho .separador {
+    border-bottom: 3px solid #fff;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.bloque-derecho p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 60px; /* Espacio para las características */
+}
+
+.bloque-derecho .caracteristicas {
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Centra horizontalmente */
+    position: absolute; /* Superpone */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%); /* Centra y superpone abajo */
+}
+
+.bloque-derecho .caracteristica {
+    text-align: center;
+    background-color: #fff; /* Fondo blanco para los iconos */
+    color: #000; /* Texto negro */
+    padding: 15px;
+}
+
+.bloque-derecho .caracteristica img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: none; /* Elimina el filtro blanco */
+}
+
+.bloque-derecho .caracteristica p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+
 
 /* **Diseño Responsivo con Media Queries** */
 
+
+/* Para pantallas más grandes (ancho mínimo de 769px) */
+@media (min-width: 769px) {
+    .por-que-nosotros {
+        align-items: center;
+    }
+}
 /* Para pantallas más pequeñas (max-width: 768px) */
 @media (max-width: 768px) {
     header {
@@ -295,13 +356,6 @@ header {
         margin-bottom: 10px;
         flex-direction: column;
         align-items: center;
-    }
-
-    .logo-circle {
-        width: 50px;
-        height: 50px;
-        margin-right: 0; /* Centrar la imagen del logo */
-        margin-bottom: 10px; /* Espacio debajo del logo */
     }
 
     .logo-container h1 {
@@ -332,14 +386,14 @@ header {
     .sobre-nosotros {
         flex-direction: column; /* Apila los elementos verticalmente */
         text-align: center; /* Centra el texto */
+        width: 100%;
         padding: 30px;
         align-items: center; /* Centra los elementos horizontalmente */
     }
 
     .imagen-sobre-nosotros {
-        margin-right: 0;
+        margin-right: 0px;
         margin-bottom: 30px;
-        max-width: 80%; /* La imagen ocupa más ancho en pantallas pequeñas */
     }
 
     .texto-sobre-nosotros {
@@ -359,11 +413,6 @@ header {
         gap: 30px;
         align-items: center;
     }
-    
-    .titulo-proyecto {
-        font-size: 2.5rem;
-        margin-bottom: 20px; /* Espacio debajo del título */
-    }
 
     .descripcion-proyecto {
         max-width: 80%;
@@ -379,25 +428,99 @@ header {
 
     .imagen-principal {
         position: relative; /* Vuelve a ser relativo para apilar */
-        width: 100%;
+        margin-left: 150px;
+        width: 90%;
         height: auto; /* Ajusta la altura automáticamente */
         margin-bottom: 20px; /* Espacio entre las imágenes */
     }
 
     .imagen-secundaria {
-        position: relative; /* Vuelve a ser relativo para apilar */
-        width: 100%;
+        position: absolute; /* Vuelve a ser relativo para apilar */
+        margin-top: 100px;
+        margin-right: 100px;
+        width: 70%;
         height: auto; /* Ajusta la altura automáticamente */
     }
 
     .info-proyecto {
         max-width: 80%;
         text-align: left;
-        margin-top: 30px;
+        margin-right: 100px;
     }
 
     .navegacion-proyecto {
         justify-content: center;
+    }
+    .por-que-nosotros {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .bloque-izquierdo {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 80%;
+        padding: 30px;
+        margin-left: 0;
+    }
+
+    .bloque-derecho {
+        max-width: 80%;
+        padding: 30px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .bloque-derecho .caracteristicas {
+        justify-content: center;
+        position: relative; /* Vuelve a ser relativo */
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 30px; /* Espacio desde el texto */
+    }
+    .por-que-nosotros {
+        flex-direction: column; /* Apila los bloques verticalmente */
+        padding: 40px;
+        gap: 40px;
+        align-items: center; /* Centra los bloques */
+    }
+
+    .bloque-izquierdo {
+        position: relative; /* Vuelve a ser relativo */
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 80%;
+        padding: 30px;
+        margin-left: 0; /* Elimina el margen */
+        margin-bottom: 30px; /* Añade espacio entre bloques */
+    }
+
+    .bloque-derecho {
+        max-width: 80%;
+        padding: 30px;
+        text-align: center; /* Centra el texto del bloque derecho */
+        margin-left: 0; /* Elimina el margen */
+    }
+
+    .bloque-derecho .separador {
+        margin-left: auto;
+        margin-right: auto; /* Centra el separador */
+    }
+
+    .bloque-derecho .caracteristicas {
+        justify-content: center; /* Centra las características */
+        position: relative; /* Vuelve a ser relativo */
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 30px; /* Espacio desde el texto */
+        flex-direction: row; /* Disposición horizontal para características */
     }
 }
 
@@ -448,7 +571,7 @@ header {
         font-size: 0.9rem;
     }
 
-   .proyecto-destacado {
+    .proyecto-destacado {
         padding: 20px;
         gap: 20px;
     }
@@ -459,7 +582,7 @@ header {
     }
 
     .imagenes-proyecto {
-        width: 95%;
+        width: 75%;
     }
 
     .info-proyecto {
@@ -473,5 +596,88 @@ header {
 
     .navegacion-proyecto a {
         font-size: 0.8rem;
+    }
+
+    .por-que-nosotros {
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .bloque-izquierdo {
+        max-width: 95%;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .bloque-derecho {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .bloque-derecho h2 {
+        font-size: 2rem;
+    }
+
+    .bloque-derecho p {
+        font-size: 0.9rem;
+        margin-bottom: 50px; /* Espacio para las características */
+    }
+
+    .bloque-derecho .caracteristicas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .bloque-derecho .caracteristica img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bloque-derecho .caracteristica p {
+        font-size: 0.9rem;
+    }
+
+    .por-que-nosotros {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .bloque-izquierdo {
+        max-width: 95%;
+        padding: 15px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .bloque-derecho {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .bloque-derecho h2 {
+        font-size: 2rem;
+    }
+
+    .bloque-derecho p {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    .bloque-derecho .caracteristicas {
+        flex-direction: row; /* Apila las características */
+        align-items: center; /* Centra las características */
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .bloque-derecho .caracteristica img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .bloque-derecho .caracteristica p {
+        font-size: 0.85rem;
     }
 }
