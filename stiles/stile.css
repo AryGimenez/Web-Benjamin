@@ -1,4 +1,3 @@
-/* Definición de variables de color para uso en todo el documento */
 :root {
     --primary-color: #070F0F; /* Color primario: negro */
     --secondary-color: #101420; /* Color secundario: blanco */
@@ -7,485 +6,861 @@
     --font2: Arial;/* Ibarra-Real-Nova; */
 }
 
-
-/* Ajustes generales */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    color: var(--secondary-color);
-    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
-/* Estilos para la cabecera (header) del sitio  La parte superior de la pagina donde esta la imagen y el logo*/
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: var(--secondary-color); /* Configuracion de fondo */
-    padding: 20px;
-    font-family: var(--font2); /* Establece la fuente de los textos dentro del contenedor. Usa la variable para la fuente */
-    font-size: 4vw; /* Define el tamaño de la fuente de los textos dentro del contenedor. */
-    margin-top: 0px; /* Añade un margen superior de 100 píxeles al contenedor. */
-    color: var(--accent-color); /* Establece el color del texto utilizando la variable CSS --accent-color. */
-    height: auto; /* Ajusta la altura del contenedor automáticamente según su contenido. */
-}
-
-
-/* div de divicion par titulo del header y logo */
-header .logo {
-    display: flex; /* Usa flexbox para alinear los elementos dentro del contenedor. */
-    flex-direction: column; /* Establece la dirección de los elementos dentro del contenedor. */
-    justify-content: space-between;
-    align-items: flex-start; /* Alinea los elementos dentro del contenedor al centro. */
-    max-width: 60%; /* Establece el ancho máximo del contenedor. */
-}
-
-header .logo img {
-    height: auto; /* Ajusta la altura de la imagen automáticamente para mantener la proporción original de la imagen. */
-    transform: translate(15vw, 0); /* Desplaza la imagen 20 píxeles a la derecha y 0 píxeles hacia abajo */
-    max-width: 100%;
-}
-
-header .logo h2 {
-    margin: 0 2; /* Elimina el margen para que los elementos estén más juntos */
-    transform: translate(20vh, 0); /* Desplaza el texto 20 píxeles a la derecha y 0 píxeles hacia abajo */
-    font-size: 3vw; /* Establece el tamaño de la fuente del texto dentro del contenedor. */
-}
-
-
-
-.header-img {
-    margin-left: 635px;
-    margin-top: -500px;
-    max-width: 40%;
-    height: auto;
-}
-
-
-/* Navigation styling */
-nav {
-    background-color: var(--secondary-color); /* Using your primary color variable */
-    padding: 15px 0;
-    position: sticky; /* Makes the nav stay at top when scrolling */
-    top: 0;
-    z-index: 1; /* Ensures nav appears above other content */
-    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
-    min-height: 2vw ; /* Ajusta la altura según sea necesario */
-    color: var(--accent-color);  /* Color de la barra */
-
-}
-
-nav ul {
-    list-style: none;
-    position: relative;
-    top: 12px;
-    display: flex;
-    justify-content: center; /* Centers the menu items */
+    background-color: var(--secondary-color); /* Color de fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+    display: flex; /* Lo mantenemos para la disposición interna */
     align-items: center;
-    flex-wrap: wrap;
-    color:white;
+    padding-left: 50px;
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+/* Estilos para la parte izquierda del header (logo, título y navegación) */
+.left-header {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Ocupa el espacio disponible */
 }
 
-nav ul li {
+/* Contenedor del logo y título */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px; /* Espacio entre el logo y la navegación */
+}
+
+/* Estilos para la imagen del logo */
+.site-title {
+    margin-top: 30px;
+}
+/* Título del sitio */
+.site-title h1 {
+    margin: 0;
+    line-height: 1.3;
+    font-size: 3rem;
+}
+
+.site-title h1:last-child {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* Estilos para la navegación principal */
+.main-nav ul {
+    background-color: var(--secondary-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
-    color: var(--accent-color); /* This is your white color variable */
+.main-nav ul li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1rem;
-    transition: 0.3s;
+    font-size: 1.4rem;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
-nav ul li a:hover {
-    opacity:0.8;
-    font-size: 1.3rem; /* Cambia el tamaño de la fuente al pasar el mouse */
-    text-decoration: underline; /* Añade subrayado al texto al pasar el mouse */
+.main-nav ul li a:hover {
+    opacity: 1;
 }
 
-/* Estilos para la lista de navegación */
-nav ul {
-    list-style: none; /* Sin viñetas */
-    margin: 0; /* Sin márgenes */
-    padding: 0; /* Sin relleno */
-    display: flex; /* Uso de flexbox */
+/* Estilos para la parte derecha del header (imagen) */
+.right-header {
+    flex: 1; /* Ocupa el espacio restante */
 }
 
-/* Estilos para cada elemento de la lista de navegación */
-nav ul li {
-    margin-left: 20px; /* Margen izquierdo de 20 píxeles */
-}
-
-
-/* Estilos para la sección principal (hero) */
-.hero {
-    height: auto; /* Altura de la sección: 500 píxeles */
-    display: flex; /* Uso de flexbox */
-    flex-direction: row; /* Dirección de los elementos: columna */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    text-align: center;
-    background-color: var(--primary-color);
-    margin-top: 100px;
-    width: calc(100% - 100px);
-}
-.hero img{
-    min-height: 550px;
-    min-width: 580px;
-    margin-top: 20px;
-}
-
-.hero-img {
-    height: auto; /* Ajusta automáticamente la altura */
-    width: 100%; /* Asegura que no se desborde */
-}
-
-/* Estilos para el contenido dentro de la sección hero */
-.hero-content {
-    text-align: center;
-    color: var(--accent-color); /* Color del texto: color secundario (blanco) */
-
-}
-
-/* Estilos para el título principal dentro de la sección hero */
-.hero-content h1 {
-    text-align: center; /* Centrar el texto */
-    font-size: 2.5rem; /* Tamaño de la fuente: 3 veces el tamaño normal */
-    margin-bottom: 60px; /* Margen inferior de 20 píxeles */
-    text-decoration: underline;
-}
-.hero-content p{
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    line-height: 2.5;
-}
-
-
-/* Estilos para las secciones de "Sobre nosotros", "Proyectos", "Por qué nosotros", "Blog" y "Clientes" */
-.about, .projects, .why-us, .blog, .clients {
-    padding: 50px; /* Relleno de 50 píxeles */
-    text-align: left; /* Texto centrado */
-    margin-top: 100px;
-}
-
-.projects h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-    text-decoration: underline;
-}
-
-.projects ul {
-    list-style-type: disc;
-    font-size: 1.2rem;
-    padding-left: 20px;
-    margin-bottom: 30px;
-    color: #555;
-}
-
-.content-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
-    justify-content: space-between;
-}
-
-.image-container {
-    flex: 1 1 60%; /* Ajusta el ancho relativo */
-}
-
-.right-section {
-    flex: 1 1 35%; /* Ajusta el ancho relativo */
-}
-
-.casas {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 75%;
-}
-
-.casas img.casa1 {
-    width: 80%;
-    position: absolute;
-    bottom: 10;
-    left: 130px;
-}
-
-.casas img.casa2 {
-    width: 60%;
-    position: absolute;
-    bottom: 20px;
-    left: -5px;
-}
-
-.image-container img {
+.right-header img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
     height: auto;
-    display: block;
-    border-radius: 5px;
+    display: block; /* Evita espacios innecesarios debajo de la imagen */
 }
 
-.right-section {
-    width: 40%; /* Reducido a 35% */
-    font-size: 1.2rem;
-    padding-left: 20px;
-    text-align: left;
-}
-
-.content {
-    max-width: 500px;
-}
-
-.right-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.right-section p {
-    font-size: 24gpx;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #555;
-}
-
-.view-case {
-    background-color: #e0e0e0;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 30px;
-}
-
-.about text{
-    font-size: 32px;
-    font-family: var(--font1);
-    color: var(--primary-color);
-    padding: auto;;
-}
-
-/* Estilos para las imágenes dentro de los proyectos */
-
-.project img{
-    max-width: 100%; /* Ancho máximo del 100% del contenedor */
+.sobre-nosotros {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--primary-color); /* Fondo oscuro como en la imagen */
+    color: #fff;
+    margin-top: 100px;
+    width: calc(100% - 2.5%);
+    padding: 20px;
+    align-items: center; /* Centra verticalmente los elementos */
+    box-sizing: border-box;
 }
 
-.why-us {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: start;
-    padding: 50px;
-    position: relative;
-    left: 100px;
-    max-width: 100%;
-    min-height: 400px;
+.imagen-sobre-nosotros {
+    flex: 1; /* Ocupa el espacio disponible */
+    margin-right: 30px; /* Espacio entre la imagen y el texto */
 }
 
-.why-us h2 {
-    font-size: 2.5em;
-    position: relative;
-    text-decoration: underline;
+.imagen-sobre-nosotros img {
+    width: 70%;
 }
 
-.why-us-text {
-    line-height: 1.6;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 1200px;
-    position: absolute;
-    top: 200px;
-    right: 150px;
+.texto-sobre-nosotros {
+    flex: 1; /* Ocupa el espacio disponible */
+    max-width: 500px; /* Ancho máximo para el texto */
 }
 
-.why-us-content {
-    background-color: #bebebe;
-    padding: 30px;
-    max-width: 400px;
-    text-align: left;
-    border-radius: 10px;
-    position: absolute;
-    top: 300px;
-    left: 100px;
-    transform: translateX(-35%);
-}
-
-.why-us-content p {
-    line-height: 1.6;
-    color: #000000;
-}
-
-.icons-container {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: 200px;
-    top: 375px;
-    left: 1050px;
-    width: 300px;
-    z-index: 0;
-}
-
-.icon {
-    position: relative;
-    margin: 0 20px;
-    padding: 50px;
-    padding-bottom: 20px;
-}
-
-.icon img {
-    display: block;
-    margin: 0 auto;
-}
-
-.icon img.icon-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
-.icon p {
-    margin-top: 5px;
-    color: #333;
-    font-size: 16px;
-}
-
-/* Nuevos estilos */
-
-.icons-container {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 50px;
-    right: 100px;
-    width: 300px;
-}
-
-.icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-
-}
-
-.icon img {
-    width: 60px;
-    min-height: 60px;
-}
-
-.icon img.icon-background {
-    width: 170px;
-    min-height: 170px;
-}
-/* Estilos para el contenedor de publicaciones del blog */
-.blog {
-    background-color: var(--secondary-color); /* Color de fondo */
-    padding: 40px;
-    text-align: center;
-    margin: 160px 100px;
-    border-radius: 16px;
-}
-
-.blog h2 {
+.texto-sobre-nosotros h2 {
     font-size: 2.5rem;
-    color: var(--accent-color);
-    position: relative;
-    text-decoration: underline;
-}
-
-.blog-posts {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(90px);
-    gap: 100px; /* Espacio entre las imágenes */
-    border-radius: 16px;
-    
-}
-
-.blog-post {
-    max-width: 100%; /* Ancho de las imágenes */
-    min-height: 500px;
-    text-align: center;
-}
-
-.blog-post img {
-    width: 100%;
-    min-height: auto;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
-.blog-post p {
-    border-radius: 6px;
-    background-color: var(--primary-color);
-    text-align: center;
-    position: relative;
-    left: 10px;
-    bottom: 20px;
-    transform: translateY(-45px);
-    width: 350px;
-    min-height: 100px;
-    font-size: 1.3rem;
-    line-height: 1.7;
-    color: var(--accent-color);
-    z-index: 1;
+.separador {
+    border-bottom: 1px solid #fff;
+    width: 50px;
+    margin-bottom: 20px;
 }
 
-/* Estilos para el pie de página (footer) */
-
-footer {
-    background-color: var(--secondary-color); /* Fondo: color de la imagen de referencia */
-    background-size: cover;
-    padding: 20px; /* Relleno */
-    display: flex; /* Usamos flexbox para alinear los elementos */
-    justify-content:space-around; /* Espacio entre los elementos */
-    align-items: center; /* Centramos verticalmente */
-    color: var(--accent-color); /* Color del texto */
-    margin-top: 30vh;
+.texto-sobre-nosotros p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
-footer .logo img {
-    width: 20vh;
-    height: auto; /* Altura del logo */
-    border-radius: 50%; /* Hace el logo circular */
-    position: absolute;
-    left: 0;
+.boton-leer-mas {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-footer .contact {
+.boton-leer-mas:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.proyecto-destacado {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    align-items: flex-start;
+    flex-direction: column; /* Apilamos los bloques principales verticalmente */
+}
+
+.descripcion-proyecto {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 20px; /* Espacio debajo del texto */
+}
+
+.descripcion-proyecto ul {
+    list-style: disc;
+    padding-left: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.imagenes-proyecto {
+    display: flex;
+    position: relative; /* Contenedor relativo para la superposición */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 500px; /* Ancho máximo para las imágenes */
+    align-self: center; /* Centra horizontalmente el contenedor de imágenes */
+}
+
+.imagen-principal {
+    position: absolute; /* Posicionamiento absoluto para la superposición */
+    top: 2vw;
+    right: 10vw;
+    width: 100%; /* Ajusta el ancho de la imagen principal */
+    height: auto;
+}
+
+.imagen-principal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.imagen-secundaria {
+    position: absolute; /* Posicionamiento absoluto para la superposición */
+    top: 10vw;
+    right: 22vw;
+    width: 100%; /* Ajusta el ancho de la imagen secundaria */
+    height: auto;
+}
+
+.imagen-secundaria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.info-proyecto {
+    max-width: 400px;
+    margin-top: 20px; /* Espacio encima del texto de info */
+    margin-left: 60vw;
+}
+
+.info-proyecto h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-proyecto p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.navegacion-proyecto {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.navegacion-proyecto a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.navegacion-proyecto a:hover {
+    color: #0056b3;
+}
+
+.por-que-nosotros {
+    display: flex;
+    margin-top: 350px;
+    position: relative; /* Necesario para posicionar el bloque izquierdo */
+}
+
+.bloque-izquierdo {
+    background-color: #bebebe; /* Fondo gris más oscuro */
+    color: black;
+    padding: 40px;
+    max-width: 400px;
+    position: absolute; /* Permite superponer */
+    top: 110%;
+    left: 30px;
+    transform: translateY(-50%); /* Centra verticalmente */
+    z-index: 10; /* Asegura que esté encima del bloque derecho */
+}
+
+.bloque-izquierdo p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.bloque-derecho {
+    flex: 1;
+    background-color: var(--primary-color); /* Fondo oscuro */
+    color: #fff;
+    padding: 40px;
+    margin-left: 200px;
+    position: relative; /* Para posicionar las características */
     display: flex;
     flex-direction: column;
-    gap: 0; /* Espacio entre los elementos */
-    position: relative;
-    left: -15vw;
-    top: 1vw;
+    justify-content: center;
+    align-items: center;
 }
 
-footer .contact-items {
+.bloque-derecho h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.bloque-derecho .separador {
+    border-bottom: 3px solid #fff;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.bloque-derecho p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 60px; /* Espacio para las características */
+}
+
+.bloque-derecho .caracteristicas {
     display: flex;
-    flex-direction: row;
-    align-items: center; /* Centramos verticalmente los iconos */
-    gap: 5vw; /* Espacio entre el icono y el texto */
-    margin: 0 10px;
+    gap: 30px;
+    justify-content: center; /* Centra horizontalmente */
+    position: absolute; /* Superpone */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%); /* Centra y superpone abajo */
+}
+
+.bloque-derecho .caracteristica {
+    text-align: center;
+    background-color: #fff; /* Fondo blanco para los iconos */
+    color: #000; /* Texto negro */
+    padding: 15px;
+}
+
+.bloque-derecho .caracteristica img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: none; /* Elimina el filtro blanco */
+}
+
+.bloque-derecho .caracteristica p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.ultimos-proyectos {
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 40px;
+    background-color: var(--primary-color); /* Fondo gris claro */
+    text-align: center;
+}
+
+.ultimos-proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 200px;
+    color: var(--accent-color);
+}
+
+.proyectos-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center; /* Centra los proyectos horizontalmente */
+    flex-wrap: wrap; /* Permite que los proyectos pasen a la siguiente línea en pantallas pequeñas */
+}
+
+.proyecto {
+    max-width: 300px; /* Ancho máximo para cada proyecto */
+    margin-bottom: 30px;
+}
+
+.imagen-proyecto {
     position: relative;
-    left: 10vw;
-    bottom: 3vw;
+    border-radius: 8px;
+    overflow: hidden; /* Recorta la categoría si se sale */
+}
+
+.imagen-proyecto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.categoria {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.proyecto p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+.contacto {
+    margin-top: 100px;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+.main-footer {
+    background-color: var(--secondary-color); /* Fondo oscuro */
+    color: #fff;
+    padding: 30px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between; /* Espacia los bloques */
+    align-items: center; /* Centra verticalmente */
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-footer img {
+    width: 140px;
+    height: auto;
+    margin-right: 15px;
 }
 
 
-footer .contact img {
-    min-height: 30px; /* Altura de los iconos */
-    margin-right: 20px;
+.footer-middle {
+    display: flex;
+    gap: 50px;
 }
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info img {
+    width: 30px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.address-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.address-info img {
+    width: 30px;
+    height: auto;
+    margin-left: 5px;
+}
+
+/* **Diseño Responsivo con Media Queries** */
+
+
+/* Para pantallas más grandes (ancho mínimo de 769px) */
+@media (min-width: 769px) {
+    .por-que-nosotros {
+        align-items: center;
+    }
+}
+/* Para pantallas más pequeñas (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Centra el texto */
+        padding: 15px;
+    }
+
+    .left-header {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-container h1:last-child {
+        font-size: 1.8rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .right-header {
+        width: 100%; /* La imagen ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .right-header img {
+        margin-top: 20px; /* Espacio entre la navegación y la imagen */
+    }
+
+    .sobre-nosotros {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        text-align: center; /* Centra el texto */
+        width: 100%;
+        padding: 30px;
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .imagen-sobre-nosotros {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    .texto-sobre-nosotros {
+        max-width: 80%; /* El texto ocupa más ancho en pantallas pequeñas */
+    }
+
+    .texto-sobre-nosotros h2 {
+        font-size: 2rem;
+    }
+
+    .separador {
+        margin: 20px auto; /* Centra el separador */
+    }
+
+    .proyecto-destacado {
+        padding: 30px;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .descripcion-proyecto {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .imagenes-proyecto {
+        width: 80%;
+        max-width: none;
+        flex-direction: column; /* Apila las imágenes en pantallas pequeñas */
+        align-items: center; /* Centra las imágenes */
+    }
+
+    .imagen-principal {
+        position: relative; /* Vuelve a ser relativo para apilar */
+        margin-left: 160px;
+        width: 90%;
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-bottom: 20px; /* Espacio entre las imágenes */
+    }
+
+    .imagen-secundaria {
+        position: absolute; /* Vuelve a ser relativo para apilar */
+        margin-top: 100px;
+        margin-right: 50px;
+        width: 70%;
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .info-proyecto {
+        max-width: 80%;
+        text-align: left;
+        margin-right: 100px;
+    }
+
+    .navegacion-proyecto {
+        justify-content: center;
+    }
+    .por-que-nosotros {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .bloque-izquierdo {
+        position: absolute;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 80%;
+        padding: 30px;
+        margin-left: 0;
+    }
+
+    .bloque-derecho {
+        max-width: 80%;
+        padding: 30px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .bloque-derecho .caracteristicas {
+        justify-content: center;
+        position: relative; /* Vuelve a ser relativo */
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 30px; /* Espacio desde el texto */
+    }
+    .por-que-nosotros {
+        flex-direction: column; /* Apila los bloques verticalmente */
+        padding: 40px;
+        gap: 40px;
+        align-items: center; /* Centra los bloques */
+    }
+
+    .bloque-izquierdo {
+        position: relative; /* Vuelve a ser relativo */
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 80%;
+        padding: 30px;
+        margin-left: 0; /* Elimina el margen */
+        margin-bottom: 30px; /* Añade espacio entre bloques */
+    }
+
+    .bloque-derecho {
+        max-width: 80%;
+        padding: 30px;
+        text-align: center; /* Centra el texto del bloque derecho */
+        margin-left: 0; /* Elimina el margen */
+    }
+
+    .bloque-derecho .separador {
+        margin-left: auto;
+        margin-right: auto; /* Centra el separador */
+    }
+
+    .bloque-derecho .caracteristicas {
+        justify-content: center; /* Centra las características */
+        position: relative; /* Vuelve a ser relativo */
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 30px; /* Espacio desde el texto */
+        flex-direction: row; /* Disposición horizontal para características */
+    }
+    
+    .proyectos-container {
+        flex-direction: column; /* Apila los proyectos verticalmente */
+        align-items: center; /* Centra los proyectos horizontalmente */
+    }
+
+    .proyecto {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 20px; /* Reduce el margen inferior */
+    }
+
+    .imagen-proyecto img {
+        max-height: 400px; /* Altura máxima para las imágenes */
+        object-fit: cover; /* Recorta la imagen para que encaje */
+    }
+
+    .proyecto p {
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .main-footer {
+        flex-direction: column; /* Apila los bloques verticalmente */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-footer img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer-right {
+        /* No necesitamos flex-direction column aquí */
+        text-align: center;
+    }
+
+    .address-info {
+        justify-content: center;
+    }
+
+    .address-info img {
+        margin-left: 5px; /* Mantenemos el margen */
+        margin-right: 5px;
+    }
+}
+
+
+
+/* Para pantallas aún más pequeñas (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-title h1 {
+        font-size: 1rem;
+    }
+
+    .site-title h1:last-child {
+        font-size: 1.5rem;
+    }
+
+    .main-nav ul li a {
+        font-size: 1rem;
+    }
+
+    .right-header h1 {
+        font-size: 1rem;
+    }
+
+    .sobre-nosotros {
+        padding: 20px;
+    }
+
+    .imagen-sobre-nosotros {
+        max-width: 95%;
+    }
+
+    .texto-sobre-nosotros {
+        max-width: 95%;
+        font-size: 1rem;
+    }
+
+    .texto-sobre-nosotros h2 {
+        font-size: 1.8rem;
+    }
+
+    .boton-leer-mas {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .proyecto-destacado {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .descripcion-proyecto {
+        max-width: 95%;
+        font-size: 0.9rem;
+    }
+
+    .imagenes-proyecto {
+        width: 75%;
+    }
+
+    .info-proyecto {
+        max-width: 95%;
+        font-size: 0.9rem;
+    }
+
+    .info-proyecto h2 {
+        font-size: 1.8rem;
+    }
+
+    .navegacion-proyecto a {
+        font-size: 0.8rem;
+    }
+
+    .por-que-nosotros {
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .bloque-izquierdo {
+        max-width: 95%;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .bloque-derecho {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .bloque-derecho h2 {
+        font-size: 2rem;
+    }
+
+    .bloque-derecho p {
+        font-size: 0.9rem;
+        margin-bottom: 50px; /* Espacio para las características */
+    }
+
+    .bloque-derecho .caracteristicas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .bloque-derecho .caracteristica img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bloque-derecho .caracteristica p {
+        font-size: 0.9rem;
+    }
+
+    .por-que-nosotros {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .bloque-izquierdo {
+        max-width: 95%;
+        padding: 15px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .bloque-derecho {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .bloque-derecho h2 {
+        font-size: 2rem;
+    }
+
+    .bloque-derecho p {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    .bloque-derecho .caracteristicas {
+        flex-direction: row; /* Apila las características */
+        align-items: center; /* Centra las características */
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .bloque-derecho .caracteristica img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .bloque-derecho .caracteristica p {
+        font-size: 0.85rem;
+    }
+
+    .company-name p {
+        font-size: 0.9rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .address-info p {
+        font-size: 0.9rem;
+    }
+}
+
