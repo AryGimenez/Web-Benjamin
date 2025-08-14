@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #070F0F; /* Color primario: negro */
+    --secondary-color: #101420; /* Color secundario: blanco */
+    --accent-color: #ffffff; /* Color de acento: gris claro */
+    --font1: 'sans-sherif';  
+    --font2: Arial;/* Ibarra-Real-Nova; */
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+    
+}
+
+.main-menu {
+    display: flex;
+    position: absolute;
+    list-style: none;
+    gap: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* ...existing code... */
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 2.5rem;
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-menu {
+        display: none;
+        flex-direction: column;
+        background: var(--secondary-color);
+        color: var(--accent-color);
+        position: absolute;      /* Cambiado de absolute a fixed */
+        top: 60px;
+        right: 20px;          /* Igual que el botón hamburguesa */
+        width: 200px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .main-menu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}

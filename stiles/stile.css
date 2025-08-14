@@ -1,15 +1,22 @@
 :root {
     --primary-color: #070F0F; /* Color primario: negro */
-    --secondary-color: #101420; /* Color secundario: blanco */
+    --secondary-color: #101420; /* Color secundario: azul-oscuro */
+    --tercer-color: #fff; /*Color del Fondo: Blanco*/
     --accent-color: #ffffff; /* Color de acento: gris claro */
     --font1: 'sans-sherif';  
     --font2: Arial;/* Ibarra-Real-Nova; */
 }
 
-body {
+* {
+    padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
+body{
+    background-color:var(--tercer-color);
+}
 header {
     background-color: var(--secondary-color); /* Color de fondo oscuro */
     color: #fff; /* Color de texto blanco */
@@ -50,32 +57,71 @@ header {
     font-weight: bold;
 }
 
+nav {
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+    
+}
+
 
 /* Estilos para la navegación principal */
-.main-nav ul {
-    background-color: var(--secondary-color);
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.main-menu {
     display: flex;
-}
-
-.main-nav ul li {
-    margin-left: 20px;
-}
-
-.main-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.4rem;
-    opacity: 0.7;
+    position: absolute;
+    list-style: none;
+    flex-direction: space-between;
+    gap: 2rem;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
-.main-nav ul li a:hover {
-    opacity: 1;
+
+/* ...existing code... */
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    font-size: 2.5rem;
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-menu {
+        display: none;
+        flex-direction: column;
+        background: var(--secondary-color);
+        color: var(--accent-color);
+        position: absolute;      /* Cambiado de absolute a fixed */
+        top: 60px;
+        right: 20px;          /* Igual que el botón hamburguesa */
+        width: 200px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .main-menu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
 /* Estilos para la parte derecha del header (imagen) */
 .right-header {
     flex: 1; /* Ocupa el espacio restante */
@@ -245,7 +291,9 @@ header {
     display: flex;
     margin-top: 350px;
     position: relative; /* Necesario para posicionar el bloque izquierdo */
+    
 }
+
 
 .bloque-izquierdo {
     background-color: #bebebe; /* Fondo gris más oscuro */
@@ -699,8 +747,8 @@ header {
 /* Para pantallas aún más pequeñas (max-width: 480px) */
 @media (max-width: 480px) {
     .logo-circle {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 
     .site-title h1 {

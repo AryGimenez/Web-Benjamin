@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Mockup</title>
-    <link rel="stylesheet" href="stiles/Responsivo.css">
+    <link rel="stylesheet" href="stiles/stile.css">
 </head>
 <nav class="main-nav">
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-        <li><a href="#trabajo-seleccionado">Trabajo Seleccionado</a></li>
-        <li><a href="#por-que-nosotros">Por qué nosotros</a></li>
-        <li><a href="#ultimos-proyectos">Ultimos Proyectos</a></li>
-        <li><a href="#contacto">Contactos</a></li>
-    </ul>
-</nav>
+        <ul class="main-menu" id="main-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#trabajo-seleccionado">Trabajo Seleccionado</a></li>
+            <li><a href="#por-que-nosotros">Por qué nosotros</a></li>
+            <li><a href="#ultimos-proyectos">Ultimos Proyectos</a></li>
+            <li><a href="#contacto">Contactos</a></li>
+        </ul>
+        <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+            &#9776;
+        </button>
+    </div>
 <body>
     
-
 <header>
     <div class="left-header" id="inicio">
         <div class="logo-container">
@@ -150,6 +152,25 @@
         </div>
     </div>
 </footer>
+        <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainMenu = document.getElementById('main-menu');
+        const menuLinks = mainMenu.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', mainMenu.classList.contains('active'));
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', false);
+            });
+        });
+
+
+    </script>
 
 </body>
 </html>
