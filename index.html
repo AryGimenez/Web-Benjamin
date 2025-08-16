@@ -1,165 +1,182 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
-
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- ?!! esto ne se lo que es -->
-    <meta name="description" content="Arquitectura Benjamin: Diseño de espacios que inspiran y conectan a las personas con su entorno.">
-    <meta name="author" content="Benjamin Diaz">
-    <title>Arquitectura Benjamin</title> <!-- Título de la página -->
-    
-    <!-- Enlace a la hoja de estilos principal -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Mockup</title>
     <link rel="stylesheet" href="stiles/stile.css">
-    
-    <!-- Enlace a AOS CSS ?!! esto no se si va creo que es el efecto que uso esteban para acer apareser las imagenes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
 </head>
 
-
+<nav class="main-nav">
+        <ul class="main-menu" id="main-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#trabajo-seleccionado">Trabajo Seleccionado</a></li>
+            <li><a href="#por-que-nosotros">Por qué nosotros</a></li>
+            <li><a href="#ultimos-proyectos">Ultimos Proyectos</a></li>
+            <li><a href="#contacto">Contactos</a></li>
+        </ul>
+        <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+            &#9776;
+        </button>
+    </div>
+</nav>
 <body>
-    <!-- Encabezado principal con logo y menú de navegación -->
-    <nav class="top-bar" aria-label="Menú de navegación principal">
-        
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="#trabajo-seleccionado">Trabajo Seleccionado</a></li>
-          <li><a href="#por-que-nosotros">Por qué nosotros</a></li>
-          <li><a href="#ultimos-proyectos">Ultimos Proyectos</a></li>
-          <li><a href="#contacto">Contactos</a></li>
-        </ul>
-      </nav>
-
     
-<header> <!-- ?!! Encabezado principal con logo y menú de navegación -->
-    <section id="inicio" class="inicio">
-        <div class="logo"> <!-- ?!! Divicion  que conteine el logo de la empresa En el head -->
-            <img src="image/LOGO.png" alt="Logo Benjamin">
-            <h2>Arquitectura</h2>
-            <h2>Benjamin</h2>
-            <img src="image/1.jpg" alt="Logo Benjamin" class="header-img">  <!-- ?!! ase referencia a la imagen al iniciar la pagina y el texto alternativo Que tendria que ser diferente si la imagen puede cargarse -->
-        </div>
-
-
-</section>
-        <!--fin class logo2-->
-        
-        
-        
-        <!-- Menú de navegación principal  ?!! aca me gustaria crear un menu para ir a los diferentes sectores de la pagina Falta defir vei nlos mismos -->
-
-    </header> 
-
-    <!-- ?!! Segundo cuadro negro -- Sección Hero principal con título y eslogan ?!! Creo que esto seria la imagen principal de el disenio en el encabesado-->
-    <section id="sobre-nosotros" class="hero">  
-        <div>
-            <img src="image/2.jpg" alt="hero-image" class="hero-img"> <!-- ?!! Que hace alt= "hero-image" -->
-        </div>
-
-
-        <div class="hero-content">
-            <h1>Sobre Nosotros</h1>
-            <p>En B+D, creemos que la arquitectura es mucho más que diseñar edificios.
-               Es crear espacios que inspiran, que conectan a las personas con su entorno y que reflejan sus sueños y aspiraciones.</p>
-        </div>
-
-    </section> <!-- Fin class hero -->
-
-
-     <!-- Sección de proyectos destacados -->
-     <section id="trabajo-seleccionado" class="projects">
-        <h2>Trabajo Seleccionado</h2>
-        <ul>
-            <li>Un arquitecto con una trayectoria sólida y una amplia experiencia en el sector.</li>
-            <li>Un profesional altamente cualificado y comprometido con la excelencia.</li>
-            <li>Un experto en [mencionar especialidad], con un profundo conocimiento de las últimas tendencias y tecnologías.</li>
-            <li>Un arquitecto que se distingue por su seriedad, responsabilidad y atención al detalle.</li>
-            <li>Un líder en el campo de la arquitectura, con un enfoque pragmático y orientado a resultados.</li>
-        </ul>
-        <div class="content-container"> 
-            <div class="image-container">
-                <div class="casas">
-                    <img src="image/3.jpg" alt="casa1" class="casa1">
-                    <img src="image/4.jpg" alt="casa2" class="casa2">
+    <header>
+        <div class="left-header" id="inicio">
+            <div class="logo-container">
+                <img class="logo-circle" src="image/LOGO.png" alt="Logo B+D">
+                <div class="site-title">
+                    <h1>Arquitectura</h1>
+                    <h1>Benjamin</h1>
                 </div>
             </div>
-            <div class="right-section">
-                <div class="content">
-                    <h2>Una Residencia</h2>
-                    <p>La construcción de esta vivienda de lujo avanza a buen ritmo, mostrando ya la calidad de los materiales y la atención al detalle. El proyecto destaca por su belleza y simpleza y ofrecerá a sus futuros propietarios un estilo de vida exclusivo.</p>
+        </div>
+
+        <div class="right-header">
+            <img src="image/1.jpg" alt="Imagen de Arquitectura">
+        </div>
+
+    </header>
+
+    <section class="sobre-nosotros" id="sobre-nosotros">
+        <div class="imagen-sobre-nosotros">
+            <img src="image/2.jpg" alt="Imagen Sobre Nosotros">
+        </div>
+        <div class="texto-sobre-nosotros">
+            <h2>Sobre nosotros</h2>
+            <div class="separador"></div>
+            <p>En B+D, creemos que la arquitectura es mucho más que diseñar edificios. Es crear espacios que inspiran, que conectan a las personas con su entorno y que reflejan sus sueños y aspiraciones.</p>
+            <a href="#" class="boton-leer-mas">Read More</a>
+        </div>
+    </section>
+
+    <section class="proyecto-destacado" id="proyecto-seleccionado">
+        <div class="descripcion-proyecto">
+            <h1 class="titulo-proyecto">Trabajo Seleccionado</h1>
+            <ul>
+                <li>Un arquitecto con una trayectoria sólida y una amplia experiencia en el sector.</li>
+                <li>Un profesional altamente cualificado y comprometido con la excelencia.</li>
+                <li>Un experto en [mencionar especialidad], con un profundo conocimiento de las últimas tendencias y tecnologías.</li>
+                <li>Un arquitecto que se distingue por su seriedad, responsabilidad y atención al detalle.</li>
+                <li>Un líder en el campo de la arquitectura, con un enfoque pragmático y orientado a resultados.</li>
+            </ul>
+        </div>
+        <div class="imagenes-proyecto">
+            <div class="imagen-principal">
+                <img src="image/4.jpg" alt="Imagen principal residencia">
+            </div>
+            <div class="imagen-secundaria">
+                <img src="image/3.jpg" alt="Imagen secundaria residencia">
+            </div>
+        </div>
+        <div class="info-proyecto">
+            <h2>Una Residencia</h2>
+            <p>La construcción de esta vivienda de lujo avanza a buen ritmo, mostrando ya la calidad de los materiales y la atención al detalle. El proyecto destaca por su belleza y simpleza y ofrecerá a sus futuros propietarios un estilo de vida exclusivo.</p>
+        </div>
+    </section>
+
+    <section class="por-que-nosotros" id="por-que-nosotros">
+        <div class="bloque-izquierdo">
+            <p>Con más de 20 años de experiencia en el sector, Benjamin es un experto en Hogares, Inmuebles y Locales. Su profundo conocimiento de las últimas tendencias y tecnologías garantiza resultados innovadores y de alta calidad.</p>
+        </div>
+        <div class="bloque-derecho">
+            <h2>Por qué nosotros</h2>
+            <div class="separador"></div>
+            <p>Benjamin Díaz es un excelente comunicador y sabe transmitir sus ideas de forma clara y concisa. Su capacidad para trabajar en equipo y coordinar a diferentes profesionales asegura una colaboración fluida y eficiente durante todo el proceso.</p>
+            <div class="caracteristicas">
+                <div class="caracteristica">
+                    <img src="image/Eci.png" alt="Eco-Friendly">
+                    <p>Eco-Friendly</p>
+                </div>
+                <div class="caracteristica">
+                    <img src="image/Tools.png" alt="Reliable">
+                    <p>Reliable</p>
+                </div>
+                <div class="caracteristica">
+                    <img src="image/24H.png" alt="24/7 Support">
+                    <p>24/7 Support</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="por-que-nosotros" class="why-us">
-        <h2>Por qué nosotros</h2>
-        <p class="why-us-text">Benjamín Diaz es un excelente comunicador y sabe transmitir sus ideas de forma clara y concisa.
-            Su capacidad para trabajar en equipo y coordinar a diferentes profesionales asegura una colaboración fluida y eficiente durante todo el proceso.</p>
-        <div class="icons-container">
-            <div class="icon">
-                <img src="image/Eci.png" alt="Eco-Friendly">
-                <img src="image/Fondo.png" alt="Fondo-Eco" class="icon-background">
-                <p>Eco-Friendly</p>
-            </div>
-            <div class="icon">
-                <img src="image/Tools.png" alt="Reliable">
-                <img src="image/Fondo.png" alt="Fondo-Rell" class="icon-background">
-                <p>Reliable</p>
-            </div>
-            <div class="icon">
-                <img src="image/24H.png" alt="24Horas">
-                <img src="image/Fondo.png" alt="Fondo-24H" class="icon-background">
-                <p>24*7 Support</p>
-            </div>
-        </div>
-        <div class="why-us-content">
-            <p>Con más de 20 años de experiencia en el sector, Benjamin es un experto en Hogares, Inmuebles y Locales.
-                Su profundo conocimiento de las últimas tendencias y tecnologías garantiza resultados innovadores y de alta calidad.</p>
-        </div>
-    </section>
-
-    <section id="ultimos-proyectos" class="blog">
-        <h2>Ultimos Proyectos</h2>
-        <div class="blog-posts">
-            <div class="blog-post">
-                <img src="image/5.jpg" alt="Blog 1">
+    <section class="ultimos-proyectos" id="ultimos-proyectos">
+        <h2>Últimos Proyectos</h2>
+        <div class="proyectos-container">
+            <div class="proyecto">
+                <div class="imagen-proyecto">
+                    <span class="categoria">Interior</span>
+                    <img src="image/5.jpg" alt="Proyecto Interior 1">
+                </div>
                 <p>un acabado simple, limpio y bonito con colores claros</p>
             </div>
-            <div class="blog-post">
-                <img src="image/6.jpg" alt="Blog 2">
+            <div class="proyecto">
+                <div class="imagen-proyecto">
+                    <span class="categoria">Interior</span>
+                    <img src="image/6.jpg" alt="Proyecto Interior 2">
+                </div>
                 <p>un excelente lugar para hacer fluir tu imaginación</p>
             </div>
-            <div class="blog-post">
-                <img src="image/7.jpg" alt="Blog 3">
-                <p>Un espacio amplio para poner lo que quieras</p>
+            <div class="proyecto">
+                <div class="imagen-proyecto">
+                    <span class="categoria">Interior</span>
+                    <img src="image/7.jpg" alt="Proyecto Interior 3">
+                </div>
+                <p>un espacio amplio para poner lo que quieras</p>
             </div>
         </div>
     </section>
 
-
-    <!-- Pie de página con información de contacto -->
-    <footer>
-        <section id="contacto">
-        <div class="logo">
-            <img src="image/LOGO.png" alt="Logo de Arquitectura Benjamin">
+    <footer class="main-footer">
+        <div class="footer-left">
+            <div class="logo-footer">
+                <img src="image/LOGO.png" alt="Logo B+D">
+            </div>
+            <div class="company-name">
+                <h1>Arquitectura</h1>
+                <h1>Benjamin</h1>
+            </div>
         </div>
-
-        <div class="contact">
-            <h1>Arquitectura</h1>
-            <h1>Benjamin</h1>
+        <div class="footer-middle">
+            <div class="contact-info">
+                <img src="image/Email.png" alt="Email">
+                <p>cbdp.arq@gmail.com</p>
+            </div>
+            <div class="contact-info">
+                <img src="image/Phone.png" alt="Phone">
+                <p>(+598) 98 804 249</p>
+            </div>
         </div>
-        <div class="contact-items">
-            <p><img src="image/Email.png" alt="Email">cdbp.arq@gmail.com</p>
-            <p><img src="image/Phone.png" alt="Telefono">(+598) 98 804 249</p>
-            <p><img src="image/Location.png" alt="Ubicacion">General Flores 324, Artigas, Uruguay</p>
+        <div class="footer-right">
+            <div class="address-info">
+                <img src="image/Location.png" alt="Location">
+                <p>324 General Flores, Artigas, Uruguay.</p>
+            </div>
         </div>
-    </section>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainMenu = document.getElementById('main-menu');
+        const menuLinks = mainMenu.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', mainMenu.classList.contains('active'));
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', false);
+            });
+        });
+
+
+    </script>
+
+    </body>
+</html>

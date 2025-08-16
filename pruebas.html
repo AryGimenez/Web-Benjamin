@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuNavegacion</title>
+    <link rel="stylesheet" href="stiles/menu.css">
+</head>
+<body>
+    <header>
+<nav class="main-nav">
+        <ul class="main-menu" id="main-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#trabajo-seleccionado">Trabajo Seleccionado</a></li>
+            <li><a href="#por-que-nosotros">Por qué nosotros</a></li>
+            <li><a href="#ultimos-proyectos">Ultimos Proyectos</a></li>
+            <li><a href="#contacto">Contactos</a></li>
+        </ul>
+        <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+            &#9776;
+        </button>
+    </div>
+
+     <div class="left-header" id="inicio">
+        <div class="logo-container">
+            <img class="logo-circle" src="image/LOGO.png" alt="Logo B+D">
+            <div class="site-title">
+                <h1>Arquitectura</h1>
+                <h1>Benjamin</h1>
+            </div>
+        </div>
+    </div>
+    <div class="right-header">
+        <img src="image/1.jpg" alt="Imagen de Arquitectura">
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainMenu = document.getElementById('main-menu');
+        const menuLinks = mainMenu.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', mainMenu.classList.contains('active'));
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', false);
+            });
+        });
+
+
+    </script>
+</nav>
+</header>
+</body>
+</html>
