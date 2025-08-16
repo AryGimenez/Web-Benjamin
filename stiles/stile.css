@@ -71,7 +71,7 @@ nav {
 /* Estilos para la navegación principal */
 .main-menu {
     display: flex;
-    position: absolute;
+    position: relative;
     list-style: none;
     flex-direction: space-between;
     gap: 2rem;
@@ -81,11 +81,22 @@ nav {
     transition: opacity 0.3s ease;
 }
 
+.main-menu li {
+    position: relative; /* Necesario para el submenú */
+}
+
+.main-menu li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 0px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 /* ...existing code... */
 .nav-content {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
     position: relative;
 }
